@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="https://www.itransition.com/admin/content/article_view">
+  <channel>
+    <title>Itransition</title>
+    <link>https://www.itransition.com/admin/content/article_view</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/how-to-work-with-it-vendors-part-3-project-start" hreflang="en"&gt;How to Work with IT Vendors. Part 3: Project Start &lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-04-05&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Together with my colleagues from Itransition we have prepared a series of articles about what happens before the start of any IT project and how to behave if you are a client. The tips in this article will work with any IT vendor:
+
+Pre-sale
+Analysis
+Start of the project
+
+During…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/why-big-data-visualization-is-a-business-necessity" hreflang="en"&gt;Why Big Data Visualization Is a Business Necessity&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-04-03&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            If you think about the worst analytics scenario, it’s probably staring at an unfiltered Excel sheet trying to make sense of all the data. If you consider the amount of data that’s being generated and processed daily, it becomes pretty apparent¾this would not be a very productive…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/launching-multifaceted-project-management-in-sharepoint-and-office-365" hreflang="en"&gt;Launching multifaceted project management in SharePoint and Office 365&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-29&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            The shift from process-focused to people-centric project management spurred the advance of collaborative project management software. SharePoint On-Premises and SharePoint Online/Office 365 are among numerous platforms that aspire to win companies’ loyalty on the project…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/how-to-adopt-predictive-modeling-in-healthcare-painlessly" hreflang="en"&gt;How to adopt predictive modeling in healthcare painlessly&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-22&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Healthcare providers spend most on the smallest segment of highly expensive patients. For example, Kaiser Permanente in Southern California reported that 1% of their patients makes 29% of their total costs, with whopping $98K per patient annually. The main reason for this…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/ar-in-healthcare-from-medical-training-to-patient-education" hreflang="en"&gt;AR in healthcare: from medical training to patient education&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-20&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+    
+      Any sufficiently advanced technology is indistinguishable from magic.
+
+    
+    
+      
+        
+      
+      
+        Arthur C. Clarke
+        Writer
+      
+    
+  
+
+  
+  
+            Our today is filled with amazing technologies designed to make life easier, but only a few of…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/why-you-dont-need-a-blockchain" hreflang="en"&gt;Why you don’t need a blockchain&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-15&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Blockchain has emerged as one of the hottest buzzwords in recent memory. Many investors are pouring resources into this technology. If you listen to the blockchain hype, it’s the next ‘big’ thing. But is blockchain truly a panacea?
+This is an important question to answer,…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/vr-in-healthcare-treating-patients-in-virtual-and-real-worlds" hreflang="en"&gt;VR in healthcare: treating patients in virtual and real worlds&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-13&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+    
+      Everything you can imagine is real.
+
+    
+    
+      
+        
+      
+      
+        Pablo Picasso
+        Painter, sculptor
+      
+    
+  
+
+  
+  
+            Virtual reality takes over the world. With entertainment as the primary application, VR’s main goal is to take you anywhere…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/the-recipe-of-a-successful-sharepoint-intranet" hreflang="en"&gt;The Recipe of a Successful SharePoint Intranet&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-08&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            SharePoint intranet development has much in common with culinary arts. Acquiring SharePoint out-of-the-box, a company gets a variety of features to transform them into a custom intranet. Just the same way a chef in a restaurant uses different ingredients to cook a specialty. But…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/pains-of-healthcare-may-extinct-thanks-to-blockchain" hreflang="en"&gt;3 pains of healthcare may extinct thanks to blockchain&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-03-06&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Trusting is difficult, but it is a routine part of life. We are not superheroes: we entrust other people with our problems, needs, and wishes every day. Yet different activities require different degrees of trust. You may easily buy something on Amazon relying on user reviews only…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/blockchain-applications-beyond-bitcoin" hreflang="en"&gt;Blockchain Applications: Beyond Bitcoin&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-28&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            The blockchain technology was first popularized by bitcoin. However, blockchain applications have now moved beyond cryptocurrencies. The future is bright with countless companies, startups, and developers working on a wide range of blockchain solutions. Blockchain’s ability to…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/connected-living-in-the-iot-smart-home" hreflang="en"&gt;Connected Living in the IoT Smart Home&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-27&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            In Gartner’s last release of the Hype Cycle for Emerging Technologies, the concept of connected homes has finally reached the top of the cycle along with machine learning and virtual assistants.
+
+  
+
+    
+    
+      
+              
+          Data Source: https://www.gartner.com/…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/the-era-of-robotics-in-healthcare-at-its-dawn" hreflang="en"&gt;The era of robotics in healthcare at its dawn&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-22&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Thanks to dystopian books and movies, the world’s robotized future appears both fascinating and terrifying. There can be a fine line between a symbiotic human-robot coexistence in peace and a Matrix-like catastrophe, but many advances of robotics give humanity hope to thrive…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/sharepoint-onpremises-vs-sharepoint-online" hreflang="en"&gt;SharePoint On-Premises vs. SharePoint Online: What’s best for your organization?&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-20&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            For over a decade, business owners could use SharePoint as an on-premises platform only. Finally, in 2011, Microsoft released Office 365 and SharePoint Online. However, it didn’t make companies rush to the cloud, so Microsoft started to promote the suite actively in 2015–2016.…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/benefit-of-beacons-in-retail-that-is-overlooked" hreflang="en"&gt;One Benefit of Beacons That Retailers Often Overlook&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-15&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Business media is paying plenty of attention to Bluetooth low-energy (BLE) beacons in retail, especially in terms of their potential for marketing and customer experience enhancement. While you’ll find no shortage of online discussion about these advantages, beacons offer other…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/the-coming-blockchain-revolution-how-businesses-are-developing-highimpact-blockchain-solutions" hreflang="en"&gt;The Coming Blockchain Revolution: How Businesses Are Developing High-Impact Blockchain Solutions&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-13&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Fast-changing technologies represent both opportunities and threats for enterprises. Those companies that keep with the times — or better yet — are early adopters of cutting-edge technologies, can carve out competitive advantages and identify areas to develop highly profitable…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/discovering-diagnostic-potential-of-healthcare-iot" hreflang="en"&gt;Discovering Diagnostic Potential of Healthcare IoT&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-08&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            As an effect of increasing consciousness and engagement of consumers in their wellbeing, the demand for health monitoring technologies keeps growing, with a projected rise at CAGR of 30 percent by the year 2023, according to OBRC’s research.
+Reaching a certain point of self-…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/how-to-boost-instore-sales-with-retail-business-intelligence" hreflang="en"&gt;How to Boost In-Store Sales with Retail Business Intelligence&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-05&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            According to respected sources in the arena of commerce, the translation of data into actionable insights is both a crucial benefit and a current challenge for retailers operating brick-and-mortar outlets.
+A number of reports into the state of the retail industry, including those…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/the-connected-world-taking-up-the-iot-challenge" hreflang="en"&gt;The Connected World - Taking up The IoT Challenge&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-02-02&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            As urban dwellers inhabiting 80% of our increasingly crowded planet, we are surrounded by countless helpers in our cities, our houses and our transport. These sensors and other “things” are designed to make our lives simpler and safer and remove the mundane tasks from our complex…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/take-control-of-cloud-migration-in-five-steps" hreflang="en"&gt;Take Control of Cloud Migration in 5 Steps&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-01-23&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            Cloud migration is a process where you have to invest before you start saving. Migration to the cloud is complicated, resulting in many difficult decisions and sacrifices to make along the way. Some of them are completely out of your control, like data protection laws that you…&lt;/p&gt;</description>
+</item>
+<item>
+  <description>&lt;p&gt;&lt;strong&gt;&lt;a href="https://www.itransition.com/blog/five-cornerstones-of-using-big-data-to-make-business-decisions" hreflang="en"&gt;Five Cornerstones of Using Big Data to Make Business Decisions&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;time datetime="00Z" class="datetime"&gt;2018-01-22&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;  
+  
+            According to Forrester Blogs, the majority of enterprises leverage only 40% of structured data and 31% of unstructured data to make data-driven decisions. If effective use of data is tantamount to gain competitive edge, then why are enterprises still lagging behind? Today I want…&lt;/p&gt;</description>
+</item>
+
+  </channel>
+</rss>

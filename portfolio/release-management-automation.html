@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<!-- Mirrored from www.itransition.com/portfolio/release-management-automation by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Apr 2018 13:54:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js',userIP:'192.140.149.25',exactTime:1523281885776});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKSKW9');</script>
+  <!-- End Google Tag Manager -->
+    <title>Release Management Plug-in for Wargaming</title>
+  <style>@font-face{font-family:"PragmaticaBook";src:url("../themes/itransition/fonts/342E08_0_0.eot");src:url("../themes/itransition/fonts/342E08_0_0.html") format("woff2"),url("../themes/itransition/fonts/342E08_0_0.woff") format("woff"),url("../themes/itransition/fonts/342E08_0_0.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"PragmaticaExtraLight";src:url("../themes/itransition/fonts/342E08_1_0.eot");src:url("../themes/itransition/fonts/342E08_1_0.html") format("woff2"),url("../themes/itransition/fonts/342E08_1_0.woff") format("woff"),url("../themes/itransition/fonts/342E08_1_0.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"PragmaticaLight";src:url("../themes/itransition/fonts/342E08_2_0.eot");src:url("../themes/itransition/fonts/342E08_2_0.html") format("woff2"),url("../themes/itransition/fonts/342E08_2_0.woff") format("woff"),url("../themes/itransition/fonts/342E08_2_0.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"PragmaticaLightOblique";src:url("../themes/itransition/fonts/342E08_3_0.eot");src:url("../themes/itransition/fonts/342E08_3_0.html") format("woff2"),url("../themes/itransition/fonts/342E08_3_0.woff") format("woff"),url("../themes/itransition/fonts/342E08_3_0.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"TrumpSoftPro";src:url("../themes/itransition/fonts/342E08_4_0.eot");src:url("../themes/itransition/fonts/342E08_4_0.html") format("woff2"),url("../themes/itransition/fonts/342E08_4_0.woff") format("woff"),url("../themes/itransition/fonts/342E08_4_0.ttf") format("truetype");font-weight:normal;font-style:normal}</style>
+  <meta charset="utf-8"/>
+<meta name="title" content="Release Management Plug-in for Wargaming"/>
+<link rel="canonical" href="release-management-automation.html"/>
+<meta name="description" content="Itransition developed a custom Java-based release management plug-in for one of the leaders in the free-to-play MMO market"/>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>a,body,div,h1,h2,h3,html,i,li,p,section,span,strong,ul{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;font-size:100%}body,html{height:100%}button,input{margin:0;padding:0;border:0}a,button,div,h1,h2,h3,input,span{outline:0}ul{list-style-type:none}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}a{text-decoration:none;color:#332f2e}button{background-color:transparent;outline:0}svg,svg:not(:root){overflow:visible}input::-ms-clear{display:none}input:-ms-input-placeholder{color:#0a904c}html{font-size:16px}body{font-family:PragmaticaBook,Arial;background-color:#fff;color:#332f2e;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}h1{font-family:TrumpSoftPro;font-size:7.5rem;color:#20ad65;line-height:.95}.h2,h2{font-family:TrumpSoftPro;font-size:4rem;letter-spacing:.08125rem;line-height:1;text-transform:uppercase}.h2 strong,h2 strong{color:#20ad65}.h3,h3{font-family:TrumpSoftPro;font-size:2.625rem;letter-spacing:.05625rem;color:#332f2e;text-transform:uppercase;line-height:.95}.out{width:100%;position:relative;display:table;height:100%;table-layout:fixed}.wrapper{display:table-row;height:100%}.l{max-width:1280px;padding:0 3.125rem;margin:auto}.l:after{content:" ";display:table;clear:both}.header{position:absolute;top:0;width:100%;z-index:500;left:0}.header .header-inner{position:relative;z-index:2;padding:2.5rem 3.125rem}.header .header-inner:after{content:" ";display:table;clear:both}.header .logo{height:1.5625rem;width:12.625rem;margin:.625rem 0;float:left}.header .logo svg{width:100%;height:100%;fill:#332f2e}.header .logo.white svg{fill:#fff}.header-navigation{float:right;position:relative}.navigation-body{min-width:320px;font-size:0;position:fixed;left:0;width:100%}.navigation-list{display:inline-block;vertical-align:middle}.navigation-link{display:inline-block;vertical-align:middle;background-color:#20ad65;border-radius:3px;margin-left:1.875rem}.navigation-link span{font-family:TrumpSoftPro;font-size:1.25rem;color:#332f2e;text-transform:uppercase;letter-spacing:.05625rem;padding:.6875rem 2.0625rem .5625rem 1.875rem;display:inline-block;color:#fff}.navigation-item{float:left;position:relative}.navigation-item .navigation-item_head{position:relative;-webkit-backface-visibility:hidden;backface-visibility:hidden}.navigation-item .navigation-item_head&gt;a{font-family:TrumpSoftPro;font-size:1.25rem;color:#332f2e;text-transform:uppercase;letter-spacing:.04375rem;display:inline-block;padding:0 1.25rem}.navigation-item_body .list-item{display:block;height:100%}.navigation-item_body .list-item a{font-family:PragmaticaLight,Arial;font-size:1rem;color:#332f2e;display:block;padding:.6875rem 1.625rem;background-color:transparent;position:relative;text-transform:none;letter-spacing:normal}.navigation-item_trigger i{display:block;width:100%;height:100%}.navigation-item_trigger i svg{width:100%;height:100%}.burger{position:absolute;top:-2.25rem;right:-.9375rem;width:53px;height:53px;z-index:505;display:none}.burger .humburger{width:28px;height:14px;position:absolute;top:50%;left:50%;margin:-7px 0 0 -14px;overflow:hidden}.burger .humburger span{position:absolute;width:100%;display:block;background-color:#000;height:2px;left:0}.burger .humburger span:nth-child(1){top:0}.burger .humburger span:nth-child(2){top:6px}.burger .humburger span:nth-child(3){top:12px}.burger .cross{width:28px;height:28px;position:absolute;top:50%;left:50%;margin:-14px 0 0 -14px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.burger .cross span{will-change:opacity}.burger .cross span:nth-child(1){height:100%;width:2px;position:absolute;top:0;left:47%;background-color:#000;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0)}.burger .cross span:nth-child(2){width:100%;height:2px;position:absolute;top:47%;left:0;background-color:#000;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0)}.message{width:3.5rem;height:2.5rem;position:absolute;top:2.3125rem;left:.9375rem;display:none;z-index:-1}.message .message-cover{width:1.75rem;height:1.25rem;position:absolute;top:50%;left:50%;margin:-.625rem 0 0 -.875rem}.message .message-cover svg{width:100%;height:100%;fill:#20ad65}.section{display:inline-block;width:100%;position:relative;margin-bottom:-6px}.section .section-inner{margin:5rem 0}.section .section-inner:after{content:" ";display:table;clear:both}.section .section-name{position:absolute;top:0;max-width:12.5rem;width:100%}.section .section-name .h2,.section .section-name h2{font-family:TrumpSoftPro;font-size:2.625rem;letter-spacing:.05625rem;color:#332f2e;text-transform:uppercase;line-height:1}.section .section-name .h2 strong,.section .section-name h2 strong{color:#20ad65}.section .l{position:relative}.upload-files .form-item input{font-size:0}.upload-files .form-item .js-hide.button{display:none}.upload-files .form-submit{opacity:0}.footer-topper input:-webkit-autofill{-webkit-text-fill-color:#fff;-webkit-box-shadow:0 0 0 1000px #20ad65 inset!important}input[type=submit]{background-color:#fff;display:inline-block;border-radius:2px}.wrap .intro{height:43.75rem;position:relative;z-index:2}.wrap .intro .intro-bg{height:auto;bottom:0;background-color:#fff}.wrap .intro .l{height:100%;position:relative}.wrap .intro .l .intro-head{position:absolute;bottom:6.875rem;padding:0 3.125rem}.wrap.wrap-inner .intro{height:43.75rem;margin-bottom:.125rem}.wrap.wrap-inner .intro .intro-bg{background-color:#000}.wrap.wrap-inner .intro .intro-inner{border:none}.wrap.wrap-inner .intro .l{position:initial;height:auto}.wrap.wrap-inner .intro .l .intro-head{padding:0;bottom:0}.wrap.wrap-inner .intro .intro-head{margin:auto;bottom:0;text-align:center;width:auto;position:relative}.wrap.wrap-inner .intro .intro-head h1{text-transform:uppercase;font-size:4rem;color:#fff;max-width:54.0625rem;width:100%;margin:auto;margin-bottom:1.75rem}.wrap.wrap-inner .intro .intro-head .descr{max-width:53.75rem;color:#bdbdbd;margin:auto;padding-top:.625rem;line-height:1.6;font-size:1.125rem}.wrap.wrap-inner .intro .intro-bg .intro-bg_in{opacity:.4}.wrap.wrap-inner .text-container .title-head .h3,.wrap.wrap-inner .text-container .title-head h3{font-family:TrumpSoftPro;font-size:2.25rem;letter-spacing:.04375rem;color:#332f2e;text-transform:uppercase;line-height:normal}.wrap.wrap-inner .bread-crumbs{margin-bottom:2.5rem}.wrap.wrap-inner .bread-crumbs .bread-crumbs_list li::after{color:#fff;opacity:.5}.wrap.wrap-inner .bread-crumbs .bread-crumbs_list li a,.wrap.wrap-inner .bread-crumbs .bread-crumbs_list li span{color:#fff;opacity:.5}.wrap .intro-bg{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:-1}.wrap .intro-bg .intro-bg_in{position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-repeat:no-repeat;background-position:50% 50%}.wrap .intro-head{position:relative;bottom:.8125rem;left:0;right:0}.wrap .intro-head h1{text-transform:uppercase;position:relative;left:-3px;letter-spacing:.1375rem;max-width:95%}.bread-crumbs{margin-bottom:1.9375rem;display:inline-block}.bread-crumbs .bread-crumbs_list:after{content:" ";display:table;clear:both}.bread-crumbs .bread-crumbs_list li{display:inline;position:relative}.bread-crumbs .bread-crumbs_list li:not(:last-child){margin-right:1.25rem}.bread-crumbs .bread-crumbs_list li:not(:last-child)::after{content:"/";position:absolute;right:-.75rem;top:0;color:#6f716d}.bread-crumbs .bread-crumbs_list li a,.bread-crumbs .bread-crumbs_list li span{font-family:PragmaticaLight,Arial;font-size:1rem;color:#6f716d;display:inline}.text-container{max-width:48.75rem;margin:auto}.text-container:not(:last-child){margin-bottom:2.1875rem}.text-container .text-inner{max-width:35.9375rem;margin:auto;margin-bottom:4rem}.text-container .text-inner:after{content:" ";display:table;clear:both}.text-container .h3,.text-container h3{margin-bottom:2.0625rem}.title-head:after{content:" ";display:table;clear:both}.title-head .h3,.title-head h3{margin-bottom:1.5625rem}#previewTemplate{display:none}@media only screen and (min-device-width:320px) and (max-device-width:480px){*{-webkit-text-size-adjust:none}}@media only screen and (max-width:1279px){html{font-size:14px}.l{padding:0 35px}.header .header-inner{padding:40px 35px}.wrap .intro .l .intro-head{padding:0 35px}}@media only screen and (min-width:980px){.navigation-body{position:relative;-webkit-backface-visibility:hidden;backface-visibility:hidden}.navigation-list{overflow:inherit;margin-top:4px}.navigation-item_trigger{display:none}.navigation-item&gt;.navigation-item_body&gt;.list-links&gt;.list-item .navigation-item_trigger{display:block;position:absolute;width:.5625rem;height:.375rem;-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg);right:1.5625rem;top:50%;margin-top:-.1875rem}.navigation-item&gt;.navigation-item_body&gt;.list-links&gt;.list-item .navigation-item_trigger i{width:100%;height:100%}.navigation-item_body{position:absolute;top:100%;width:16.5625rem;left:-.3125rem;padding:1.6875rem 0 1.5625rem;opacity:0;visibility:hidden}.navigation-item_body .list-links{padding:.625rem 0 1.375rem;background-color:#fff;border-top:2px solid #20ad65;-webkit-box-shadow:0 4px 20px 0 rgba(0,0,0,.12);box-shadow:0 4px 20px 0 rgba(0,0,0,.12)}.list-item&gt;.navigation-item_body{top:0;left:auto;right:-16.5625rem}.white .navigation-item&gt;.navigation-item_head&gt;a{color:#fff}.wrap:not(.no-overflow){overflow:hidden}}@media only screen and (max-width:979px){html{font-size:16px}.out{overflow:hidden}.header .logo{display:block;float:none;margin:auto}.header .header-bg{position:absolute;background-color:transparent;width:100%;height:100%;top:0;z-index:1;left:0}.white .burger .humburger span{background-color:#fff}.navigation-body{text-align:center;opacity:0;visibility:hidden;padding-top:6.5rem;bottom:0;z-index:3;-webkit-overflow-scrolling:touch;top:0}.navigation-body-inner{padding:0 .9375rem 6.25rem .9375rem;background-color:#fff;overflow:auto;height:100%}.navigation-bg{position:fixed;top:6.5rem;left:0;background-color:#fff;width:100%;bottom:0;left:100%;display:none}.navigation-list{width:100%;text-align:left;margin-bottom:3.125rem}.navigation-item_trigger{position:absolute;right:-3.75rem;top:0;width:3.75rem;height:100%;display:block}.navigation-item_trigger i{width:1.25rem;height:.75rem;position:absolute;top:50%;right:0;margin-top:-.375rem;will-change:transform}.navigation-item{float:none;border-bottom:1px solid #dedede;padding:0 3.75rem 0 0}.navigation-item&gt;.navigation-item_head{position:relative}.navigation-item&gt;.navigation-item_head a{font-size:2.625rem;display:block;padding:2.5rem 0}.navigation-item&gt;.navigation-item_body{margin-bottom:2.5rem}.navigation-item&gt;.navigation-item_body&gt;.list-links .list-item .navigation-item_head a{font-family:PragmaticaBook,Arial;font-size:1.125rem}.navigation-item&gt;.navigation-item_body&gt;ul .navigation-item_body{margin:.625rem 0}.navigation-item&gt;.navigation-item_body&gt;ul .navigation-item_body&gt;ul .list-item a{padding:.9375rem 2.5rem}.navigation-item&gt;.navigation-item_body&gt;ul .navigation-item_trigger i{width:.75rem;height:.4375rem;right:.3125rem}.navigation-item_body{display:none}.navigation-link{max-width:15rem;width:100%;margin-left:0;margin-bottom:3.125rem}.navigation-link span{font-size:1.25rem;padding:23px}.burger{display:block}.message{display:block}.section .section-name{position:relative;top:auto;max-width:35.9375rem;margin:auto;margin-bottom:1.25rem}.wrap .intro-head h1{max-width:100%}}@media only screen and (min-width:767px){.wrap.wrap-inner .intro .intro-inner{border:none;padding:0;margin:0;width:100%;text-align:center;max-width:73.75rem;padding-top:11.875rem}}@media only screen and (max-width:767px){.l{padding:0 15px}.header .header-inner{padding:25px 15px}.navigation-bg,.navigation-body{padding-top:4.5625rem}.message{top:21px;left:4px}.wrap .intro .l .intro-head{padding:0 15px}.wrap.wrap-inner .intro{height:auto;padding-bottom:10.625rem}.wrap.wrap-inner .intro .intro-inner{padding-top:7.8125rem}}@media only screen and (max-width:480px){h1{font-size:5.625rem}.h2,h2{font-size:3.3125rem}.h3,h3{font-size:2.1875rem}.section .section-inner{margin:3.125rem 0}.section .section-name .h2,.section .section-name h2{font-size:2.1875rem}.wrap.wrap-inner .text-container .title-head .h3,.wrap.wrap-inner .text-container .title-head h3{font-size:1.875rem}}@media only screen and (max-width:413px){html{font-size:13px}.burger{top:-2.625rem}}@media only screen and (max-width:375px){h1{font-size:5.3125rem}}</style>
+
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="apple-touch-icon" sizes="57x57" href="../themes/itransition/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../themes/itransition/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../themes/itransition/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../themes/itransition/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../themes/itransition/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../themes/itransition/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../themes/itransition/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../themes/itransition/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../themes/itransition/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../themes/itransition/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="../themes/itransition/img/favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../themes/itransition/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../themes/itransition/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../themes/itransition/img/favicon/manifest.json">
+    <link rel="mask-icon" href="../themes/itransition/img/favicon/safari-pinned-tab.svg" color="#20ad65">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-TileImage" content="/themes/itransition/img/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#20ad65">
+</head>
+<body style="opacity: 0.001">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKSKW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--script(type="text/javascript").!function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/css/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage._font_css}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage._font_css);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage._font_css=e.responseText,localStorage._font_css_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="_font_css"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"css/font.css";window.localStorage&&localStorage._font_css||document.cookie.indexOf("_font_css")>-1?n():e(window,"load",n)}()},19:function(e,t){}});
+  -->
+    <div class="svg-defs-container" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="ico-logo-white"><g fill="#30A363"><path d="M24.746 6.641h-1.092c-1.091 0-2.183.82-2.456 1.911l-.09.364-.638 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM21.107 20.38h-1.092c-1.091 0-2.183.818-2.456 1.91l-.091.364-.637 2.274h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM22.927 13.465h-1.092c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91h-2.001z"/><g><path d="M16.376 6.641h-1.092c-1.091 0-2.183.82-2.456 1.911l-.091.364-.637 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM12.646 20.38h-1.092c-1.091 0-2.183.818-2.456 1.91l-.091.364-.637 2.274h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM14.557 13.465h-1.092c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91h-2.001z"/></g><g><path d="M8.006 6.641H6.823c-1.091 0-2.183.82-2.456 1.911l-.091.364-.637 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-1.91zM4.276 20.38H3.184c-1.092 0-2.183.818-2.456 1.91l-.091.364L0 24.928h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91H4.276zM6.096 13.465H5.004c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91H6.096z"/></g></g><g fill="#30A363"><path d="M161.214 0h-1.091c-1.092 0-2.184.819-2.457 1.91l-.09.364-.638 2.275h3.094c1.091 0 2.183-.819 2.456-1.91l.091-.365.637-2.274h-2.002zM138.197 0h-1.092c-1.092 0-2.183.819-2.456 1.91l-.091.364-.637 2.275h3.093c1.092 0 2.184-.819 2.456-1.91l.091-.365.637-2.274h-2.001zM36.573 0h-1.091c-1.092 0-2.184.819-2.457 1.91l-.09.364-.729 2.275H35.3c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.363L38.484 0h-1.91z"/></g><g class="letters" fill="#FFF"><path d="M200.7 8.188c-.91-1-2.73-1.547-5.46-1.547h-9.097l-.546 1.911-1.91 7.187-2.457 9.098H184.05c1.09 0 2.183-.819 2.456-1.91l1.364-5.186 1.365-5.186.546-1.91H193.693c1.275 0 2.093.181 2.366.636.182.182.273.546.182 1.001 0 .455-.09 1-.273 1.638l-2.911 11.008h2.912c1.091 0 2.183-.819 2.456-1.91l2.638-9.644c.637-2.457.455-4.185-.364-5.186zM180.229 8.552c-1.092-1.456-2.911-2.365-5.277-2.547h-2.183c-2.457.182-4.731 1.091-6.642 2.547-1.91 1.456-3.366 3.457-4.185 5.823-.09.364-.273.727-.364 1.091-.182.728-.273 1.365-.364 2.002v.91c0 1.546.455 2.82 1.274 3.82 1 1.275 2.366 2.093 4.276 2.457.637.091 1.274.182 2.093.182 3.002 0 5.55-.819 7.733-2.547 2.183-1.729 3.639-4.003 4.458-6.824.09-.364.182-.727.273-1.091.09-.728.182-1.365.182-1.91-.091-1.548-.455-2.821-1.274-3.913zm-4.276 6.914c-.455 1.729-1.274 3.094-2.365 4.094-.91.82-2.002 1.365-3.276 1.456H169.221c-1.183-.09-2.002-.637-2.457-1.456-.546-1-.546-2.365-.09-4.094.09-.182.09-.454.181-.636a8.214 8.214 0 0 1 2.093-3.458c1.091-1 2.365-1.455 3.82-1.455 1.456 0 2.457.455 3.003 1.455.273.455.455 1.092.455 1.729.09.728-.091 1.456-.273 2.365zM158.303 6.641c-1.092 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.183-.819 2.456-1.91l1.911-7.188 2.456-9.098h-3.093zM151.753 6.641h-3.094l.91-3.275.91-3.275h-2.912c-1.091 0-2.183.819-2.456 1.91l-.364 1.365-.364 1.365-.546 1.91H142.2c-.91 0-1.91.82-2.184 1.82l-.455 1.82h3.276l-.546 1.91-1.91 7.006c-.456 1.82-.365 3.275.272 4.276.728 1 1.91 1.455 3.73 1.455h4.367l.455-1.82.455-1.819h-1.91c-1.183 0-1.911-.273-2.184-.819-.364-.546-.273-1.455.091-2.82l2.002-7.37h3.093c1.092 0 2.183-.818 2.456-1.819l.455-1.82h-1.91zM135.376 6.641c-1.091 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.184-.819 2.457-1.91l1.91-7.188 2.457-9.098h-3.094zM127.28 6.641h-8.37c-.547 0-1.092 0-1.547.091-1.456.182-2.73.637-3.73 1.274-.728.546-1.365 1.183-1.82 2.093-.182.273-.273.546-.455.91-.182.454-.364.91-.455 1.364-.546 1.91-.455 3.275.273 4.094.637.728 2.184 1.183 4.731 1.183h4.185c.91 0 1.456.182 1.82.455.273.182.364.546.364.91 0 .09 0 .272-.091.454-.182.637-.455 1.092-1.001 1.365-.455.273-1.183.455-2.093.455h-8.188c-1.092 0-2.183.819-2.456 1.91l-.546 1.911H120.365c1.456 0 2.82-.546 4.003-1.638 1.183-1 2.093-2.456 2.547-4.094a6.795 6.795 0 0 0 .273-1.82c0-.909-.273-1.637-.818-2.183-.82-.91-2.184-1.455-4.185-1.455h-4.367c-.82 0-1.365-.091-1.638-.364-.273-.273-.364-.637-.182-1.274s.455-1 .91-1.274c.455-.273 1.364-.364 2.82-.364h6.55c1.092 0 2.184-.818 2.457-1.91l.546-1.91h-2.002V6.64zM106.991 8.188c-.91-1-2.73-1.547-5.459-1.547H92.434l-2.456 9.098-1.91 7.188-.546 1.91h2.911c1.092 0 2.183-.819 2.456-1.91l1.365-5.186 1.365-5.186.546-1.91H100.076c1.274 0 2.093.181 2.366.636.182.182.182.546.182 1.001 0 .455-.09 1-.273 1.638L99.44 24.928h2.911c1.092 0 2.184-.819 2.457-1.91l2.638-9.644c.546-2.457.455-4.185-.455-5.186zM50.22 6.641H47.036l.546-1.91.364-1.365.364-1.364L48.856 0H46.035c-1.091 0-2.183.819-2.456 1.91l-.364 1.365-.455 1.456-.546 1.91h-1.728c-.91 0-1.911.82-2.184 1.82l-.455 1.82h3.457l-2.365 8.916c-.455 1.82-.455 3.275.273 4.276.637 1 1.91 1.455 3.73 1.455h4.367l.455-1.82.455-1.819h-2.002c-1.182 0-1.91-.273-2.183-.819-.364-.546-.273-1.455.09-2.82l1.456-5.459.546-1.91H49.311c1.091 0 2.183-.82 2.456-1.82l.455-1.82H50.22zM34.754 6.641h-1.092c-1.092 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.184-.819 2.456-1.91l1.911-7.188 1.91-7.187.546-1.91h-2.001zM65.96 6.641h-3.64c-2.547 0-4.548.546-6.095 1.729-1.547 1.092-2.638 2.82-3.275 5.095l-3.094 11.463h3.002c1.092 0 2.184-.819 2.457-1.91l2.093-7.734.545-1.91c.182-.546.364-1 .637-1.365.091-.182.091-.273.182-.455l.728-.455c.728-.454 1.91-.636 3.548-.636H66.87l.546-1.911.546-1.91H65.96zM86.157 8.37c-1-1.183-2.638-1.729-5.186-1.729h-9.826l-1.091 3.73h8.097c1.637 0 2.73.183 3.275.637.546.455.637 1.183.364 2.275l-.091.455H75.33c-2.638 0-4.549.455-5.913 1.364-1.365.91-2.275 2.457-2.912 4.458-.454 1.638-.363 3.003.455 3.913.728.91 2.002 1.364 3.821 1.364h12.92l3.093-11.463c.546-2.184.364-3.912-.637-5.004zm-6.46 12.828h-6.004c-1.092 0-1.729-.182-2.002-.364-.273-.273-.273-.728-.09-1.365.181-.727.545-1.273 1.091-1.546.546-.364 1.365-.455 2.457-.455h5.731l-1.183 3.73z"/></g></symbol><symbol id="ico-logo" viewBox="0 0 202 25"><g fill="#30A363"><path d="M24.746 6.641h-1.092c-1.091 0-2.183.82-2.456 1.911l-.09.364-.638 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM21.107 20.38h-1.092c-1.091 0-2.183.818-2.456 1.91l-.091.364-.637 2.274h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM22.927 13.465h-1.092c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91h-2.001z"/><g><path d="M16.376 6.641h-1.092c-1.091 0-2.183.82-2.456 1.911l-.091.364-.637 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM12.646 20.38h-1.092c-1.091 0-2.183.818-2.456 1.91l-.091.364-.637 2.274h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91h-2.002zM14.557 13.465h-1.092c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91h-2.001z"/></g><g><path d="M8.006 6.641H6.823c-1.091 0-2.183.82-2.456 1.911l-.091.364-.637 2.274h3.093c1.092 0 2.184-.818 2.457-1.91l.09-.364.092-.364.546-1.91h-1.91zM4.276 20.38H3.184c-1.092 0-2.183.818-2.456 1.91l-.091.364L0 24.928h3.093c1.092 0 2.184-.819 2.457-1.91l.09-.364.092-.364.546-1.91H4.276zM6.096 13.465H5.004c-1.092 0-2.184.819-2.457 1.91l-.09.364-.637 2.275h3.093c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.364.546-1.91H6.096z"/></g></g><g fill="#30A363"><path d="M161.214 0h-1.091c-1.092 0-2.184.819-2.457 1.91l-.09.364-.638 2.275h3.094c1.091 0 2.183-.819 2.456-1.91l.091-.365.637-2.274h-2.002zM138.197 0h-1.092c-1.092 0-2.183.819-2.456 1.91l-.091.364-.637 2.275h3.093c1.092 0 2.184-.819 2.456-1.91l.091-.365.637-2.274h-2.001zM36.573 0h-1.091c-1.092 0-2.184.819-2.457 1.91l-.09.364-.729 2.275H35.3c1.092 0 2.183-.819 2.456-1.91l.091-.365.091-.363L38.484 0h-1.91z"/></g><g class="letters"><path d="M200.7 8.188c-.91-1-2.73-1.547-5.46-1.547h-9.097l-.546 1.911-1.91 7.187-2.457 9.098H184.05c1.09 0 2.183-.819 2.456-1.91l1.364-5.186 1.365-5.186.546-1.91H193.693c1.275 0 2.093.181 2.366.636.182.182.273.546.182 1.001 0 .455-.09 1-.273 1.638l-2.911 11.008h2.912c1.091 0 2.183-.819 2.456-1.91l2.638-9.644c.637-2.457.455-4.185-.364-5.186zM180.229 8.552c-1.092-1.456-2.911-2.365-5.277-2.547h-2.183c-2.457.182-4.731 1.091-6.642 2.547-1.91 1.456-3.366 3.457-4.185 5.823-.09.364-.273.727-.364 1.091-.182.728-.273 1.365-.364 2.002v.91c0 1.546.455 2.82 1.274 3.82 1 1.275 2.366 2.093 4.276 2.457.637.091 1.274.182 2.093.182 3.002 0 5.55-.819 7.733-2.547 2.183-1.729 3.639-4.003 4.458-6.824.09-.364.182-.727.273-1.091.09-.728.182-1.365.182-1.91-.091-1.548-.455-2.821-1.274-3.913zm-4.276 6.914c-.455 1.729-1.274 3.094-2.365 4.094-.91.82-2.002 1.365-3.276 1.456H169.221c-1.183-.09-2.002-.637-2.457-1.456-.546-1-.546-2.365-.09-4.094.09-.182.09-.454.181-.636a8.214 8.214 0 0 1 2.093-3.458c1.091-1 2.365-1.455 3.82-1.455 1.456 0 2.457.455 3.003 1.455.273.455.455 1.092.455 1.729.09.728-.091 1.456-.273 2.365zM158.303 6.641c-1.092 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.183-.819 2.456-1.91l1.911-7.188 2.456-9.098h-3.093zM151.753 6.641h-3.094l.91-3.275.91-3.275h-2.912c-1.091 0-2.183.819-2.456 1.91l-.364 1.365-.364 1.365-.546 1.91H142.2c-.91 0-1.91.82-2.184 1.82l-.455 1.82h3.276l-.546 1.91-1.91 7.006c-.456 1.82-.365 3.275.272 4.276.728 1 1.91 1.455 3.73 1.455h4.367l.455-1.82.455-1.819h-1.91c-1.183 0-1.911-.273-2.184-.819-.364-.546-.273-1.455.091-2.82l2.002-7.37h3.093c1.092 0 2.183-.818 2.456-1.819l.455-1.82h-1.91zM135.376 6.641c-1.091 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.184-.819 2.457-1.91l1.91-7.188 2.457-9.098h-3.094zM127.28 6.641h-8.37c-.547 0-1.092 0-1.547.091-1.456.182-2.73.637-3.73 1.274-.728.546-1.365 1.183-1.82 2.093-.182.273-.273.546-.455.91-.182.454-.364.91-.455 1.364-.546 1.91-.455 3.275.273 4.094.637.728 2.184 1.183 4.731 1.183h4.185c.91 0 1.456.182 1.82.455.273.182.364.546.364.91 0 .09 0 .272-.091.454-.182.637-.455 1.092-1.001 1.365-.455.273-1.183.455-2.093.455h-8.188c-1.092 0-2.183.819-2.456 1.91l-.546 1.911H120.365c1.456 0 2.82-.546 4.003-1.638 1.183-1 2.093-2.456 2.547-4.094a6.795 6.795 0 0 0 .273-1.82c0-.909-.273-1.637-.818-2.183-.82-.91-2.184-1.455-4.185-1.455h-4.367c-.82 0-1.365-.091-1.638-.364-.273-.273-.364-.637-.182-1.274s.455-1 .91-1.274c.455-.273 1.364-.364 2.82-.364h6.55c1.092 0 2.184-.818 2.457-1.91l.546-1.91h-2.002V6.64zM106.991 8.188c-.91-1-2.73-1.547-5.459-1.547H92.434l-2.456 9.098-1.91 7.188-.546 1.91h2.911c1.092 0 2.183-.819 2.456-1.91l1.365-5.186 1.365-5.186.546-1.91H100.076c1.274 0 2.093.181 2.366.636.182.182.182.546.182 1.001 0 .455-.09 1-.273 1.638L99.44 24.928h2.911c1.092 0 2.184-.819 2.457-1.91l2.638-9.644c.546-2.457.455-4.185-.455-5.186zM50.22 6.641H47.036l.546-1.91.364-1.365.364-1.364L48.856 0H46.035c-1.091 0-2.183.819-2.456 1.91l-.364 1.365-.455 1.456-.546 1.91h-1.728c-.91 0-1.911.82-2.184 1.82l-.455 1.82h3.457l-2.365 8.916c-.455 1.82-.455 3.275.273 4.276.637 1 1.91 1.455 3.73 1.455h4.367l.455-1.82.455-1.819h-2.002c-1.182 0-1.91-.273-2.183-.819-.364-.546-.273-1.455.09-2.82l1.456-5.459.546-1.91H49.311c1.091 0 2.183-.82 2.456-1.82l.455-1.82H50.22zM34.754 6.641h-1.092c-1.092 0-2.183.82-2.456 1.911l-1.91 7.187-2.457 9.098h3.093c1.092 0 2.184-.819 2.456-1.91l1.911-7.188 1.91-7.187.546-1.91h-2.001zM65.96 6.641h-3.64c-2.547 0-4.548.546-6.095 1.729-1.547 1.092-2.638 2.82-3.275 5.095l-3.094 11.463h3.002c1.092 0 2.184-.819 2.457-1.91l2.093-7.734.545-1.91c.182-.546.364-1 .637-1.365.091-.182.091-.273.182-.455l.728-.455c.728-.454 1.91-.636 3.548-.636H66.87l.546-1.911.546-1.91H65.96zM86.157 8.37c-1-1.183-2.638-1.729-5.186-1.729h-9.826l-1.091 3.73h8.097c1.637 0 2.73.183 3.275.637.546.455.637 1.183.364 2.275l-.091.455H75.33c-2.638 0-4.549.455-5.913 1.364-1.365.91-2.275 2.457-2.912 4.458-.454 1.638-.363 3.003.455 3.913.728.91 2.002 1.364 3.821 1.364h12.92l3.093-11.463c.546-2.184.364-3.912-.637-5.004zm-6.46 12.828h-6.004c-1.092 0-1.729-.182-2.002-.364-.273-.273-.273-.728-.09-1.365.181-.727.545-1.273 1.091-1.546.546-.364 1.365-.455 2.457-.455h5.731l-1.183 3.73z"/></g></symbol><symbol id="icon-arrow-left" viewBox="0 0 14 23"><path stroke="null" d="M13.872 1.457L12.392.07.144 11.509l12.248 11.44 1.48-1.38-10.76-10.06z"/></symbol><symbol id="icon-arrow-right" viewBox="0 0 14 23"><path stroke="null" d="M.205 1.486L1.681.103l12.216 11.41-12.216 11.41-1.476-1.376 10.733-10.034z"/></symbol><symbol id="icon-card" viewBox="0 0 21.5 18"><path d="M21 0H.4C.2 0 0 .2 0 .4v17.1c0 .3.2.5.4.5H21c.2 0 .4-.2.4-.4V.4c.1-.2-.1-.4-.4-.4zm-.4 17.1H.9V.9h19.7v16.2zM3.3 11h6.4c.3 0 .6-.3.6-.6v-.9c0-.3-.2-.5-.4-.6-1.7-.6-2.1-.9-2.2-1v-.1c.2-.2.4-.5.5-.8.1-.1.2-.3.3-.5 0-.2 0-.4-.1-.6v-.7c0-1.1-.7-1.7-1.8-1.7s-1.8.7-1.8 1.7v.6c-.3.2-.3.4-.3.6 0 .2.1.4.3.5.1.3.3.6.5.9v.1c-.1.1-.6.4-2.2 1-.2.1-.4.3-.4.6v.8c0 .4.3.7.6.7zm.2-1.4C5.7 8.7 5.9 8.4 6 8.1v-.4c0-.1 0-.2-.1-.3-.1-.2-.3-.4-.4-.8 0-.1-.1-.2-.1-.2l-.1-.1v-.1c.1-.1.1-.2.1-.2v-.8c0-.6.4-.9 1.1-.9.7 0 1.1.3 1.1.9V6c0 .1 0 .2.1.2v.1s0 .1-.1.1c0 .1-.1.2-.1.2-.1.4-.3.6-.4.8-.1.1-.1.2-.1.3v.4c.1.3.4.6 2.6 1.5v.6H3.5v-.6zM13 8.3h5.4c.2 0 .4-.2.4-.4s-.2-.4-.4-.4H13c-.2 0-.4.2-.4.4-.1.2.1.4.4.4zm0-2.6h5.4c.2 0 .4-.2.4-.4s-.2-.4-.4-.4H13c-.2 0-.4.2-.4.4-.1.2.1.4.4.4zm0 5.3h5.4c.2 0 .4-.2.4-.4s-.2-.4-.4-.4H13c-.2 0-.4.2-.4.4-.1.2.1.4.4.4zm-1.4 2.6h6.7c.2 0 .4-.2.4-.4s-.2-.4-.4-.4h-6.7c-.2 0-.4.2-.4.4s.2.4.4.4zm-8.5 0h6.7c.2 0 .4-.2.4-.4s-.2-.4-.4-.4H3.1c-.2 0-.4.2-.4.4s.2.4.4.4z"/></symbol><symbol id="icon-check" viewBox="0 0 26 20.9"><path fill="none" d="M25 1L10 19.9l-9-7.5"/></symbol><symbol id="icon-close" viewBox="0 0 60 60"><path d="M58.084.132l-28 28.1-28.1-28.1-1.9 1.9 28 28.1-28 28.1 1.9 1.9 28.1-28.1 28 28.1 2-1.9-28.1-28.1 28.1-28.1z"/></symbol><symbol id="icon-docs" viewBox="0 0 17.5 18.5"><path d="M4.1 17.6H.9V.9h13.8v3.6c0 .2.2.5.5.5s.5-.2.5-.5v-4c0-.2-.2-.5-.5-.5H.5C.2 0 0 .2 0 .5V18c0 .2.2.5.5.5h3.7c.3 0 .5-.2.5-.5-.1-.2-.3-.4-.6-.4zm13.3-9.4L15.2 6c-.1-.1-.2-.1-.3-.1H6c-.3 0-.5.2-.5.5V18c0 .2.2.5.5.5h11c.3 0 .5-.2.5-.5V8.5c0-.2 0-.3-.1-.3zm-.8 9.4H6.4V6.8h8.3l1.9 1.9v8.9zm-2.3-2.7H8.7c-.3 0-.5.2-.5.5 0 .2.2.5.5.5h5.5c.3 0 .5-.2.5-.5s-.2-.5-.4-.5zm0-2.7H8.7c-.3 0-.5.2-.5.5 0 .2.2.5.5.5h5.5c.3 0 .5-.2.5-.5s-.2-.5-.4-.5zm0-2.7H8.7c-.3 0-.5.2-.5.5 0 .2.2.5.5.5h5.5c.3 0 .5-.2.5-.5s-.2-.5-.4-.5z"/></symbol><symbol id="icon-down" viewBox="0 0 44.8 24.5"><path d="M44.603 2.176L42.517.09 22.353 20.255 2.189.09.103 2.176l22.25 22.25z"/></symbol><symbol id="icon-drop" viewBox="0 0 22.7 11.1"><path d="M22.5 1c.3.3.2.5 0 .8L11.7 11c-.3.2-.5.2-.8 0L.2 1.8C0 1.6-.1 1.3.2 1L.9.2c.3-.3.5-.3.8 0l9.7 8.5L21 .2c.3-.3.5-.2.8 0l.7.8z"/></symbol><symbol id="icon-email" viewBox="0 0 22.2 16.2"><path d="M21.102 2.128v-1.02h-20v1.02l10 7.667 10-7.667zm0 1.257V14.4L14.863 8.16l6.239-4.774zm-.707 11.723H1.812l6.331-6.334 2.959 2.263 2.96-2.265 6.333 6.336zm-19.293-.704V3.385l6.24 4.775-6.24 6.244zM.102.108h22v16h-22v-16z"/></symbol><symbol id="icon-facebook-share" viewBox="0 0 9 18.1"><path fill="#fff" d="M8.897 6.068h-3.25v-2a1 1 0 0 1 1-1h2v-3h-2.5a4 4 0 0 0-4 4v2h-2v3h2v9h3.5v-9h2.5l.75-3z"/></symbol><symbol id="icon-facebook" viewBox="0 0 30 30"><path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm3.7 10.6h-2c-.5 0-.9.4-.9 1v.8h2.9l-.5 2.6h-2.4v7.2h-2.9V15H11v-2.7h1.9V11c.1-1.6.6-3 3.5-3.1h2.4v2.7h-.1z"/></symbol><symbol id="icon-googleplus-share" viewBox="0 0 13 12"><path stroke="null" fill="#FFF" d="M12.613 4.822h-1.926V2.896a.266.266 0 0 0-.266-.267h-.549a.267.267 0 0 0-.266.267v1.926H7.679a.267.267 0 0 0-.266.266v.549c0 .147.12.266.266.266h1.927V7.83c0 .148.119.267.266.267h.549c.147 0 .266-.12.266-.267V5.903h1.926c.147 0 .267-.119.267-.266v-.549a.267.267 0 0 0-.267-.266z"/><path stroke="null" fill="#FFF" d="M6.14 6.51c-.406-.286-.774-.707-.78-.837 0-.235.02-.348.549-.759.683-.534 1.058-1.237 1.058-1.98 0-.673-.205-1.27-.555-1.69h.271a.265.265 0 0 0 .156-.051l.758-.549a.267.267 0 0 0-.156-.482H4.053c-.37 0-.747.065-1.117.192C1.7.78.836 1.833.836 2.913c0 1.53 1.186 2.69 2.771 2.727-.03.122-.046.241-.046.358 0 .236.06.46.182.676H3.7c-1.511 0-2.875.741-3.393 1.844a2.023 2.023 0 0 0-.203.864c0 .278.071.546.211.798.326.582 1.025 1.034 1.97 1.272a6.366 6.366 0 0 0 1.555.186c.488 0 .954-.063 1.385-.188 1.343-.39 2.212-1.378 2.212-2.52 0-1.095-.352-1.751-1.297-2.42zM1.86 9.018c0-.797 1.012-1.496 2.165-1.496h.031c.251.003.496.04.727.11l.23.158c.534.364.887.604.985.99.023.097.034.194.034.288 0 .992-.74 1.495-2.2 1.495-1.106 0-1.973-.678-1.973-1.545zm1.05-7.529a.886.886 0 0 1 .68-.314h.03c.75.022 1.467.857 1.598 1.86.075.563-.05 1.092-.333 1.414a.886.886 0 0 1-.69.315h-.012c-.734-.023-1.466-.89-1.597-1.892-.074-.56.044-1.064.323-1.383z"/></symbol><symbol id="icon-handshake" viewBox="0 0 20.8 17"><path d="M16.3 11.6l-.1-.1-2.7-2.4c-.3-.2-.7-.2-.9.1-.2.3 0 .5.2.8l2.5 2 .5.5c.5.5.1 2.1-1.3 1.1l-.7-.6-.1-.1-2.2-1.9c-.3-.2-.7-.2-.9.1-.2.3 0 .6.2.9l2.5 2s.4.1 0 0c.2.2 0 .8 0 1 0 .2-.3.4-.5.5-.3.1-.8-.3-1-.5l-2.5-2.5s.1.1 0 .1c0 0-.1 0-.1-.1h-.1H9h-.1-.1l-.1.1s-.1 0-.1.1c0 0 0 .1-.1.1 0 0 0 .1-.1.1v.1s-.1-.1.4.5l1 1c1.1 1.2-.3 2.2-1 1.5-1.7-1.3-6.2-5.2-7-7l1.5-7c.3-.1 1.2 0 3 0-.5.6-.9 1.7-1 2.5-.2 1.2 0 2.2.5 2.5.7.4 2 1.1 3.9-1.5.4 0 .7-.4 1.1-.5 0 0 5.7 4.9 6.5 5.5.8.6.4 2.3-1 1.1zm2-1.6c-.1-.2-.3-.3-.5-.5L11.3 4c-.2-.1-.3-.1-.5 0-.5.2-1.3.5-1.5.5-.3-.1-.4.3-.5.5-.9 1.4-1.7 1.6-2 1.5-.7-.2-.7-1.1-.5-2 .3-1.5 1.8-3.1 4-3.5 0 0 1.6-.1 5.5 2 .1.1.3 0 .5 0l1-.5 2 8c-.2.1-.8-.5-1-.5zm2.4.6L18.3 2s-.2-1.3-1-1.1c-.3.1-.4.3-.5.6l-.5.5C12.1-.2 10 0 9.9.1c-.8.1-1.5.6-2.1.9-2.1.1-3.2-.1-4 0-.1-.2 0-.9-.5-1-.5 0-.6.5-.6.5s-2 7.8-2.6 10c-.5 1.8.5 1.5.7 1l.5-1.5c1.9 2.5 6.1 6 6.6 6.4.5.4 1 .6 1.4.6.5 0 1-.3 1.3-.6l.3-.6.2.2c.4.4.9.6 1.4.6.2 0 .4 0 .6-.1.6-.2 1-.7 1.2-1.4.8.2 1.5-.1 2-.7.3-.4.5-.8.5-1.3.5-.1 1-.3 1.3-.8.2-.3.4-.6.5-.9.3 0 .5 0 .8-.1l.1.4c0 .2.2.3.3.4.2 0 1.4.1.9-1.5z"/></symbol><symbol id="icon-headphones" viewBox="0 0 18 21"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 8.9V7c0-3.9-3.1-7-7-7S2 3.1 2 7v1.9c-1.1.1-2 .9-2 1.9v3.3c0 1 1 1.9 2.1 1.9h1.3c.3 0 .5-.2.5-.5v-6c0-.3-.2-.5-.5-.5H3V7c0-3.3 2.7-6 6-6s6 2.7 6 6v1.9h-.5c-.3 0-.5.2-.5.5v6c0 .3.2.5.5.5l1 .1h.5c-.3 2.3-1.8 3.1-4.4 3.3 0-.6-.8-.8-1.1-.8h-1c-.5 0-1 .5-1 1.5 0 .6.7 1 1.1 1h.9c.5 0 .9-.3 1.1-.7 3.1-.2 5.1-1.5 5.4-4.8.5-.3 1-.8 1-1.4v-3.3c0-1-.9-1.8-2-1.9zM1 14.1V11c0-.3.2-.7.5-.8v4.7c-.3-.2-.5-.5-.5-.8zM3 10v5h-.5v-5H3zm7.5 10h-1c-.2 0-.2-.5 0-.5h1c.2 0 .2.5 0 .5zm4.5-5v-5h.5v5H15zm2-1c0 .3-.2.7-.5.8v-4.7c.3.2.5.5.5.8V14z"/></symbol><symbol id="icon-instrument" viewBox="0 0 20 20"><path d="M3.5 11.7S1.7 3.8 9.8 3.1c2.4-.2 4.6 1.6 4.6 1.6l-1 .8s-3-1.5-5.1-1c-2.4.6-4.9 1.9-4.3 6.8.1.2-.5.4-.5.4zM16.3 6.5s.8 1.3.9 3.2c.1 1-.5 2.2-.5 2.2l-.9-.3s.4-1.4.3-2.5c-.1-.9-.6-1.3-.8-1.7l1-.9zM9.5 8.4c.3-.2 5.4-2.4 5.4-2.4s-3 4.2-3.1 4.4c-.2.3-.9 1.1-1.7 1.1-.9 0-1.6-.7-1.6-1.6-.1-.8.7-1.3 1-1.5zM15.6 13c.4 0 .7.3.7.7s-.3.7-.7.7c-.4 0-.7-.3-.7-.7s.3-.7.7-.7zM12.8 14.9c.4 0 .7.3.7.7 0 .4-.3.7-.7.7s-.7-.3-.7-.7c0-.4.3-.7.7-.7zM9.5 15.8c.4 0 .7.3.7.7 0 .4-.3.7-.7.7s-.7-.3-.7-.7c0-.4.3-.7.7-.7zM6.3 14.9c.4 0 .7.3.7.7 0 .4-.3.7-.7.7-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7z" fill-rule="evenodd" clip-rule="evenodd"/><path d="M10 1c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9m0-1C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0z"/></symbol><symbol id="icon-left" viewBox="0 0 14 23"><path fill-rule="evenodd" d="M1.769 12.106l9.002 8.999a1.014 1.014 0 0 0 1.43 0 1.009 1.009 0 0 0 0-1.428l-8.287-8.285L12.2 3.107a1.01 1.01 0 0 0 0-1.43 1.014 1.014 0 0 0-1.431 0l-9.002 9a1.02 1.02 0 0 0 0 1.429z" clip-rule="evenodd"/></symbol><symbol id="icon-linked-share" viewBox="0 0 15 15"><path stroke="null" d="M.408 5.02h3.04v9.777H.409V5.02zM1.934.16c.972 0 1.763.79 1.763 1.763a1.762 1.762 0 1 1-3.527 0C.17.951.957.16 1.935.16M5.359 5.02h2.91v1.34h.04c.407-.77 1.396-1.577 2.877-1.577 3.074 0 3.645 2.023 3.645 4.657v5.357h-3.035v-4.753c0-1.136-.017-2.594-1.577-2.594-1.582 0-1.82 1.238-1.82 2.51v4.837H5.366V5.02h-.006z"/></symbol><symbol id="icon-linked" viewBox="0 0 30 30"><path d="M169-1394.1v-8.5h37v-.5c-2.7-1.7-12-10.6-13-13.5 2.2-1.5 3.3-4.1 6-5 5.3 5.5 10.7 11 16 16.5 2.2 2.2 5.8 4 6.5 7.5-5.5 5.3-11 10.7-16.5 16-2.1 2.1-4 5.4-7 6.5-1.5-2.2-4.1-3.3-5-6 4.3-4.2 8.7-8.3 13-12.5v-.5h-37z" clip-rule="evenodd" fill="none"/><path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-3 21H9.5v-9H12v9zm-1-10c-.8 0-1.5-.7-1.5-1.5S10.2 8 11 8s1.5.7 1.5 1.5c0 .9-.6 1.5-1.5 1.5zm10.5 10H19v-6s-.2-1-1.5-1-1.5 1-1.5 1v6h-2.5v-9H16v1s.6-1.5 2.5-1.5c2.2 0 3 1.6 3 3V21z" fill-rule="evenodd" clip-rule="evenodd"/></symbol><symbol id="icon-message" viewBox="0 0 28 18"><path stroke="null" d="M26.78.077H.128v17.78H27.91V.078h-1.13zm-1.111 1.111L14.936 11.921c-.49.49-1.344.49-1.833 0L2.368 1.188h23.3zm-24.43.443l7.216 7.215L1.24 16.06V1.631zm.887 15.115l7.115-7.114 3.076 3.075a2.39 2.39 0 0 0 1.702.705 2.39 2.39 0 0 0 1.702-.705l3.076-3.076 7.115 7.115H2.126zm24.673-.684l-7.216-7.216L26.8 1.629v14.433z"/></symbol><symbol id="icon-molecule" viewBox="0 0 23.1 26"><path d="M12.5 8.1c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3z" clip-rule="evenodd" fill="none"/><path d="M9.8 12.6l.5.8-5.1 3.2-.5-.8 5.1-3.2zM17.7 4.7l.7.7L14.7 9l-.7-.6 3.7-3.7zM14.3 13.4l.5-.9 4.5 3-.5.9-4.5-3zM7.3 6.6l.7-.7 3 3-.7.7-3-3zM12 14.1h1v6h-1v-6z" fill-rule="evenodd" clip-rule="evenodd"/><path d="M19.5.6C20.9.6 22 1.7 22 3.1s-1.1 2.5-2.5 2.5S17 4.5 17 3.1 18.1.6 19.5.6zM20.5 15.1c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM6.5 3.1c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM12.7 20.1c1.5 0 2.8 1.2 2.8 2.8 0 1.5-1.2 2.8-2.8 2.8-1.5 0-2.8-1.2-2.8-2.8.1-1.6 1.3-2.8 2.8-2.8zM3 15.1c1.4 0 2.5 1.1 2.5 2.5S4.4 20.1 3 20.1.5 19 .5 17.6s1.1-2.5 2.5-2.5z" clip-rule="evenodd" fill="none"/></symbol><symbol id="icon-plus" viewBox="0 0 32 32"><path stroke="null" d="M30.714 14.847h-13.48V1.366C17.233.722 16.783.2 16.14.2s-1.093.522-1.093 1.166v13.481H1.566c-.644 0-1.166.45-1.166 1.093s.522 1.093 1.166 1.093h13.481v13.481c0 .644.45 1.166 1.093 1.166s1.093-.522 1.093-1.166v-13.48h13.481c.644 0 1.166-.45 1.166-1.094s-.522-1.093-1.166-1.093z"/></symbol><symbol id="icon-purse" viewBox="0 0 21.5 19"><path d="M21.5 16.7c0 1.3-1 2.3-2.3 2.3H2.3C1 19 0 18 0 16.7V3.2c0-1 .8-1.9 1.9-1.9h9.4L15.1 0c.2-.1.5 0 .6.3l.4 1.1h1.7c1 0 1.9.8 1.9 1.9v.9c1 0 1.9.8 1.9 1.9v10.6h-.1zM1.9 2.3c-.5 0-.9.4-.9.9s.4.9.9.9H3.6l5.1-1.8H1.9zm13.6.1L15 1l-1 .3-2.6.9-5.1 2h9.8l-.6-1.8zm3.2.8c0-.5-.4-.9-.9-.9h-1.3l.7 1.9h1.6v-1h-.1zm.9 1.9H1.9c-.4 0-.7-.1-1-.3v11.8c0 .8.6 1.4 1.4 1.4h16.8c.8 0 1.4-.6 1.4-1.4v-3.2h-1.9c-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9h1.9V6c.1-.5-.4-.9-.9-.9zm1 7.4v-1.9h-1.9c-.5 0-.9.4-.9.9s.4.9.9.9h1.9v.1zm-1.9-1.4h.9v.9h-.9v-.9z"/></symbol><symbol id="icon-right" viewBox="0 0 14 23"><path fill-rule="evenodd" d="M12.354 10.596l-9.002-9a1.014 1.014 0 0 0-1.43 0 1.009 1.009 0 0 0 0 1.429l8.287 8.285-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-9a1.02 1.02 0 0 0 0-1.428z" clip-rule="evenodd"/></symbol><symbol id="icon-rss-share" viewBox="0 0 31.1 31.1"><circle r="5" cy="25.54" cx="5.048"/><path d="M18.571 31.04a2.5 2.5 0 0 1-2.5-2.5 13.515 13.515 0 0 0-13.5-13.5 2.5 2.5 0 0 1 0-5 18.521 18.521 0 0 1 18.5 18.5 2.5 2.5 0 0 1-2.5 2.5z"/><path d="M28.571 31.04a2.5 2.5 0 0 1-2.5-2.5 23.527 23.527 0 0 0-23.5-23.5 2.5 2.5 0 0 1 0-5 28.532 28.532 0 0 1 28.5 28.5 2.5 2.5 0 0 1-2.5 2.5z"/></symbol><symbol id="icon-rss" viewBox="0 0 30 30"><path clip-rule="evenodd" fill="none" d="M64.3-1392v-8.5h37v-.5c-2.7-1.7-12-10.6-13-13.5 2.2-1.5 3.3-4.1 6-5 5.3 5.5 10.7 11 16 16.5 2.2 2.2 5.8 4 6.5 7.5-5.5 5.3-11 10.7-16.5 16-2.1 2.1-4 5.4-7 6.5-1.5-2.2-4.1-3.3-5-6 4.3-4.2 8.7-8.3 13-12.5v-.5h-37z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-2.8 20.5c-.9 0-1.7-.8-1.7-1.7 0-.9.8-1.7 1.7-1.7.9 0 1.7.8 1.7 1.7.1 1-.7 1.7-1.7 1.7zm4.8 0c-.7 0-1.2-.5-1.2-1.2 0-2.3-1.8-4.1-4.1-4.1-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c3.6 0 6.5 2.9 6.5 6.5 0 .7-.5 1.2-1.2 1.2zm4.3 0c-.7 0-1.2-.6-1.2-1.2 0-4.6-3.7-8.3-8.3-8.3-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2c5.9 0 10.8 4.8 10.8 10.8-.1.6-.6 1.1-1.3 1.1z"/></symbol><symbol id="icon-search" viewBox="0 0 27.7 27.6"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.7 20.4l1.8-1.8 7.2 7.2-1.8 1.8-7.2-7.2z"/><path d="M11.7 2.1c5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5 4.2-9.5 9.5-9.5m0-2C5.3.1.2 5.2.2 11.6s5.1 11.5 11.5 11.5S23.2 18 23.2 11.6 18 .1 11.7.1z"/></symbol><symbol id="icon-share" viewBox="0 0 30 30"><path stroke="null" d="M5.503 20.459A5.512 5.512 0 0 1 0 14.956a5.512 5.512 0 0 1 5.503-5.503 5.512 5.512 0 0 1 5.503 5.503 5.512 5.512 0 0 1-5.503 5.503zm0-9.771a4.272 4.272 0 0 0-4.268 4.268 4.272 4.272 0 0 0 4.268 4.267 4.272 4.272 0 0 0 4.268-4.267 4.272 4.272 0 0 0-4.268-4.268zM24.471 11.46a5.512 5.512 0 0 1-5.503-5.502A5.512 5.512 0 0 1 24.47.455a5.512 5.512 0 0 1 5.503 5.503 5.512 5.512 0 0 1-5.503 5.503zm0-9.77a4.272 4.272 0 0 0-4.268 4.268c0 2.353 1.915 4.267 4.268 4.267s4.268-1.914 4.268-4.267A4.272 4.272 0 0 0 24.47 1.69zM24.471 29.457a5.512 5.512 0 0 1-5.503-5.503 5.512 5.512 0 0 1 5.503-5.503 5.512 5.512 0 0 1 5.503 5.503 5.512 5.512 0 0 1-5.503 5.503zm0-9.771a4.272 4.272 0 0 0-4.268 4.268c0 2.353 1.915 4.268 4.268 4.268s4.268-1.915 4.268-4.268a4.272 4.272 0 0 0-4.268-4.268z"/><path stroke="null" d="M9.466 12.72a.609.609 0 0 1-.562-.37c-.14-.31 0-.679.31-.813l10.117-4.502c.31-.14.679 0 .814.31.14.31 0 .68-.31.814L9.717 12.667a.626.626 0 0 1-.252.052zM19.588 22.93a.571.571 0 0 1-.257-.06L9.308 18.229c-.31-.14-.445-.51-.298-.82s.51-.444.82-.298l10.016 4.642c.31.141.445.51.299.82a.622.622 0 0 1-.557.357z"/></symbol><symbol id="icon-tie" viewBox="0 0 9.5 20.5"><path d="M9.5 13.2l-4-7.8-.2-.9c.1 0 .2-.1.3-.2 1-1.9.7-3.1.1-3.6 0 0-.5-.7-1.8-.7C3 0 2.6.2 1.8.7c-.7.5-1 1.7.1 3.7 0 .1.1.1.2.2L0 17.4c0 .1 0 .3.1.4l3.4 2.5c.1.1.2.1.3.1.1 0 .2-.1.3-.1l3.2-2.6c.1-.1.1-.2.1-.4L7 14.9l1.2.1h.2c.2 0 .3-.1.4-.2l.7-1.2v-.4zM2.3 1.5c.7-.4.9-.5 1.5-.5 1.1 0 1.3.5 1.3.5.1 0 .6.7-.1 2.1-.8-.1-1.6-.1-2.5 0-.7-1.4-.3-2.1-.2-2.1zm1.5 17.9L.9 17.3 3 4.5h1.4l2.1 12.8-2.7 2.1zM8.2 14H6.9l-1-5.9 2.7 5.2-.4.7z"/></symbol><symbol id="icon-twit" viewBox="0 0 30 30"><path clip-rule="evenodd" fill="none" d="M116.5-1391.9v-8.5h37v-.5c-2.7-1.7-12-10.6-13-13.5 2.2-1.5 3.3-4.1 6-5 5.3 5.5 10.7 11 16 16.5 2.2 2.2 5.8 4 6.5 7.5-5.5 5.3-11 10.7-16.5 16-2.1 2.1-4 5.4-7 6.5-1.5-2.2-4.1-3.3-5-6 4.3-4.2 8.7-8.3 13-12.5v-.5h-37z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15 .1C6.7.1 0 6.8 0 15.1s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm6.8 12.6v.4c0 4.2-3.3 9-9.5 9-1.9 0-3.6-.5-5.1-1.4H8c1.6 0 3-.5 4.1-1.4-1.5 0-2.7-.9-3.1-2.2.2 0 .4.1.6.1.3 0 .6 0 .9-.1-1.5-.2-2.6-1.5-2.6-3.1.4.2 1 .4 1.5.4-.9-.6-1.5-1.5-1.5-2.6 0-.6.2-1.1.5-1.6 1.6 1.9 4.1 3.2 6.9 3.3-.1-.2-.1-.5-.1-.7 0-1.8 1.5-3.2 3.3-3.2 1 0 1.8.4 2.4 1 .8-.1 1.5-.4 2.1-.8-.2.7-.8 1.4-1.5 1.8.7-.1 1.3-.2 1.9-.5-.4.6-1 1.2-1.6 1.6z"/></symbol><symbol id="icon-twitter-share" viewBox="0 0 16 13"><path stroke="null" fill="#FFF" d="M15.903 1.594a6.441 6.441 0 0 1-1.864.51A3.257 3.257 0 0 0 15.467.31a6.499 6.499 0 0 1-2.061.787 3.244 3.244 0 0 0-2.37-1.024 3.244 3.244 0 0 0-3.16 3.984 9.215 9.215 0 0 1-6.69-3.39A3.246 3.246 0 0 0 2.19 5a3.235 3.235 0 0 1-1.469-.406v.04a3.247 3.247 0 0 0 2.603 3.183 3.266 3.266 0 0 1-1.465.056 3.25 3.25 0 0 0 3.03 2.253A6.51 6.51 0 0 1 .086 11.47a9.192 9.192 0 0 0 4.974 1.458c5.969 0 9.233-4.945 9.233-9.234 0-.14-.004-.28-.01-.42a6.583 6.583 0 0 0 1.62-1.68z"/></symbol><symbol id="icon-warning" viewBox="0 0 16.5 14.5"><path d="M7.9 4.7v2.9l.2 2.3h.4l.2-2.3V4.7h-.8zm0 7.2h.8v-1h-.8v1z"/><path d="M8.3 1c.4 0 .8.3 1 .8.5 1 3.5 5.9 5.1 8.6.5.8.8 1.4.9 1.5.2.3.2.8-.1 1.2-.2.4-.6.4-.7.4h-13c-.1-.1-.5-.3-.7-.6-.1-.3-.1-.8.2-1.3 0-.1 4.7-7.8 5.9-9.7.6-.6 1-.9 1.4-.9m0-1c-.7 0-1.4.4-2 1.4C5.1 3.3.4 11.1.4 11.1c-1.4 2.5.9 3.4 1.2 3.4h13.1c1.6 0 2.2-2 1.6-3.1-.4-.7-5.3-8.8-6-10.1C9.8.5 9.1 0 8.3 0z"/></symbol>
+	<symbol id="logo" viewBox="0 0 1117.5 141.35625" height="25" width="202">
+	<g transform="matrix(1.25 0 0 -1.25 0 141.356)">
+	<g fill="#37b25e">
+	<path d="M716.7 107.386h-4.748c-4.692 0-9.53-3.706-10.74-8.243l-.432-1.59-2.632-9.833h13.282c4.7 0 9.526 3.71 10.744 8.245l.424 1.59 2.637 9.83H716.7z"/>
+	<path d="M608.93 107.386h-4.748c-4.69 0-9.525-3.706-10.743-8.243l-.425-1.59-2.635-9.833h13.283c4.692 0 9.523 3.71 10.74 8.245l.427 1.59 2.633 9.83h-8.533z"/>
+	<path d="M172.792 107.386h-4.747c-4.692 0-9.527-3.706-10.742-8.243l-.427-1.59-2.634-9.833h13.28c4.697 0 9.53 3.71 10.744 8.245l.426 1.59.425 1.588 2.208 8.243h-8.533z"/>
+	</g>
+	<g fill="#37b25e">
+	<path d="M107.147 78.813h-4.744c-4.694 0-9.527-3.705-10.744-8.24l-.427-1.59-2.632-9.834h13.282c4.692 0 9.524 3.706 10.74 8.245l.427 1.587.422 1.59 2.21 8.24h-8.535zM91.292 19.52h-4.747c-4.69 0-9.527-3.706-10.74-8.244l-.43-1.59-2.63-9.833H86.018c4.695 0 9.53 3.71 10.742 8.242l.43 1.59.425 1.59 2.208 8.245h-8.533zM99.226 49.163h-4.744c-4.694 0-9.528-3.704-10.744-8.24l-.426-1.588-2.636-9.84h13.278c4.697 0 9.53 3.71 10.743 8.247l.43 1.594.426 1.586 2.21 8.242h-8.536zM70.86 78.813h-4.746c-4.692 0-9.525-3.705-10.744-8.24l-.423-1.59-2.634-9.834H65.59c4.695 0 9.53 3.706 10.746 8.245l.425 1.587.426 1.59 2.207 8.24H70.86zM55.003 19.52h-4.747c-4.69 0-9.525-3.706-10.74-8.244l-.427-1.59-2.633-9.833h13.276c4.695 0 9.53 3.71 10.743 8.242l.43 1.59.423 1.59 2.208 8.245h-8.535zM62.94 49.163h-4.748c-4.693 0-9.526-3.704-10.74-8.24l-.428-1.588-2.632-9.84h13.275c4.697 0 9.53 3.71 10.743 8.247l.43 1.594.425 1.586 2.207 8.242H62.94zM34.57 78.813h-4.745c-4.694 0-9.527-3.705-10.743-8.24l-.426-1.59-2.635-9.834h13.284c4.69 0 9.525 3.706 10.74 8.245l.426 1.587.425 1.59 2.212 8.24H34.57zM18.716 19.52H13.97c-4.694 0-9.527-3.706-10.744-8.244l-.428-1.59L.166-.148h13.276c4.697 0 9.53 3.71 10.745 8.242l.428 1.59.426 1.59 2.208 8.245h-8.531zM26.648 49.163h-4.746c-4.692 0-9.527-3.704-10.74-8.24l-.43-1.588-2.63-9.84H21.375c4.697 0 9.532 3.71 10.743 8.247l.43 1.594.425 1.586 2.207 8.242H26.65z"/>
+	</g>
+	<g class="letters">
+	<path d="M609.81 78.813H596.53c-4.698 0-9.53-3.71-10.747-8.246L566.838-.145h21.794l21.18 78.96zM560.322 78.813h-36.17a58.89 58.89 0 0 1-6.78-.375c-6.422-.75-11.765-2.618-16.02-5.615-3.112-2.248-5.733-5.22-7.837-8.9a37.55 37.55 0 0 1-1.93-3.91 45.843 45.843 0 0 1-2.016-5.93c-2.266-8.45-1.947-14.132.993-17.515 2.816-3.224 9.584-4.915 20.342-4.915h17.973c3.834 0 6.438-.613 7.955-1.843 1.135-.918 1.637-2.277 1.518-3.997a9.273 9.273 0 0 0-.317-1.84c-.744-2.767-2.16-4.607-4.328-5.838-2.024-1.228-5.103-1.843-8.946-1.843h-35.4c-4.693 0-9.527-3.695-10.734-8.218l-2.204-8.22h53.765c6.3 0 12.136 2.306 17.368 6.914 5.19 4.454 8.942 10.446 10.92 17.82.754 2.82 1.123 5.408 1.103 7.746-.034 3.9-1.15 7.115-3.366 9.612-3.385 3.992-9.41 6.14-18.02 6.14h-18.89c-3.38 0-5.715.465-7.08 1.694-1.246 1.075-1.517 2.92-.86 5.375.7 2.614 2.112 4.454 4.096 5.532 2.13 1.075 6.095 1.534 12.08 1.534h28.34c4.69 0 9.525 3.71 10.74 8.243l.018.055.015.05v.01l2.207 8.235h-8.535z"></path>
+	<path d="M717.577 78.813h-13.28c-4.697 0-9.53-3.71-10.748-8.246L674.604-.145H696.4l21.177 78.96z"/>
+	<path d="M783.905 40.563c-1.975-7.373-5.383-13.212-10.066-17.51-4.067-3.63-8.78-5.734-14.008-6.203a26.24 26.24 0 0 0-4.547 0c-5.08.47-8.667 2.572-10.788 6.202-2.378 4.3-2.506 10.138-.53 17.51.254.94.523 1.854.816 2.744 2.04 6.22 5.036 11.14 9.098 14.77 4.684 4.3 10.137 6.296 16.438 6.296 6.143 0 10.523-1.996 12.945-6.14 1.193-2.153 1.855-4.688 1.968-7.627.117-2.94-.32-6.28-1.325-10.042m18.432 29.803c-4.854 6.45-12.44 10.2-22.798 11.035-1.482.118-3.02.178-4.614.178a62.28 62.28 0 0 1-4.708-.177c-10.81-.835-20.394-4.584-28.714-11.034-8.446-6.456-14.493-14.907-18.106-25.255a65.578 65.578 0 0 1-1.4-4.547c-.823-3.072-1.365-5.992-1.628-8.757a38.954 38.954 0 0 1-.177-4.032c.048-6.528 1.86-12.097 5.423-16.707 4.132-5.645 10.318-9.13 18.525-10.52 2.742-.46 5.7-.694 8.885-.694 12.905 0 24.033 3.687 33.533 11.063 9.505 7.37 15.87 17.355 19.162 29.647a62.51 62.51 0 0 1 1.047 4.548c.562 2.958.842 5.76.85 8.407.02 6.61-1.712 12.24-5.28 16.85"></path>
+	<path d="M173.67 78.813h-13.28c-4.695 0-9.53-3.71-10.746-8.246L130.7-.145h21.796l21.174 78.96zM288.906 78.813c-10.904 0-19.55-2.46-26.44-7.53-6.848-4.914-11.436-12.29-14.03-21.967L235.182-.147H257.004l13.473 50.283c4.246 12.247 13.896 12.002 21.858 12.237h13.545l4.404 16.44h-21.378zM358.068 15.675h-26.115c-4.61 0-7.515.616-8.763 1.69-1.096 1.079-1.33 3.075-.587 5.84.866 3.228 2.404 5.532 4.576 6.758 2.216 1.383 5.758 1.996 10.676 1.996h24.575l-4.362-16.285zm28.112 55.612c-4.172 5.068-11.5 7.525-22.41 7.525h-42.54l-4.57-16.435h34.874c7.063 0 11.735-.92 14.007-2.77 2.27-1.839 2.745-5.218 1.512-9.828l-.533-1.996H339.02c-11.216 0-19.742-2-25.683-5.838-5.99-3.996-10.02-10.448-12.408-19.356-1.936-7.223-1.462-12.905 1.772-16.898 3.117-3.84 8.727-5.838 16.56-5.838h55.92l13.248 49.463c2.597 9.68 1.962 17.053-2.252 21.97M474.385 72.054c-3.876 4.453-11.708 6.76-23.533 6.76H411.524L390.366-.147h20.89l16.52 61.603h16.735c5.524 0 8.968-.923 10.356-2.613.602-.92.873-2.345.798-4.264-.053-1.394-.295-3.063-.716-4.985L441.62-.145H462.514l13.47 50.08c2.76 10.29 2.28 17.662-1.598 22.12M890.726 72.054c-3.88 4.453-11.708 6.76-23.544 6.76H828.016L806.858-.147h20.893l16.52 61.603h16.577c5.533 0 8.97-.925 10.36-2.613.674-.924.983-2.345.933-4.264-.04-1.4-.277-3.076-.704-5.01L858.116-.145h20.89l13.468 50.08c2.76 10.292 2.122 17.663-1.748 22.12M207.597 28.075l9.397 34.914h20.208l4.24 15.823h-20.207l2.206 8.24 1.62 6.045 1.62 6.045v.004l2.21 8.24h-12.203c-4.694 0-9.527-3.707-10.743-8.24l-1.62-6.05-1.62-6.042v-.003l-2.207-8.24h-7.373c-4.057 0-8.33-3.562-9.496-7.91l-2.12-7.913h14.746L185.82 23.975c-1.57-5.787-.458-11.75 3.05-16.353 3.758-4.927 9.805-7.766 16.594-7.79l16.704.02 4.24 15.83h-7.694c-7.99.03-12.967 5.576-11.117 12.392M644.746 28.075l9.395 34.914h20.21l4.24 15.823h-20.208l2.208 8.24 1.618 6.045 1.62 6.045v.004l2.21 8.24h-12.202c-4.696 0-9.526-3.707-10.745-8.24l-1.617-6.05-1.62-6.042v-.003l-2.207-8.24h-7.373c-4.06 0-8.33-3.562-9.496-7.91l-2.12-7.913H633.4l-10.43-39.014c-1.57-5.787-.458-11.75 3.05-16.353 3.755-4.927 9.804-7.766 16.593-7.79l16.704.02 4.24 15.83h-7.694c-7.99.03-12.968 5.576-11.117 12.392">
+	</path>
+	</g>
+	</g></symbol></svg></div>
+
+  
+  <div class="out">
+  <div class="wrapper">
+        <div class="header">
+      <div class="inner">
+        <div class="header-inner">
+          <a class="logo white" href="../index.html">
+            <svg class="icon icon-logo">
+              <use xlink:href="#logo" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+            </svg>
+          </a>
+                    <div class="header-navigation white">
+            <div class="navigation">
+                <div class="region region-nav">
+    
+<div class="burger">
+  <div class="humburger"><span></span><span></span><span></span></div>
+  <div class="cross"><span></span><span></span></div>
+</div>
+<div class="navigation-body">
+  <div class="navigation-body-inner">
+
+                  <ul class="navigation-list">
+    
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../services.html" data-drupal-link-system-path="node/198">Services</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../services/software-consulting.html" data-drupal-link-system-path="node/255">IT Strategy &amp; Consulting</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/custom-software-development.html" data-drupal-link-system-path="node/199">Application Development</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/software-product-development.html" data-drupal-link-system-path="node/200">Product Engineering</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/enterprise-application-integration.html" data-drupal-link-system-path="node/256">Systems Integration</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/qa-testing.html" data-drupal-link-system-path="node/257">QA &amp; Testing</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/application-management.html" data-drupal-link-system-path="node/201">Application Management</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/maintenance-support.html" data-drupal-link-system-path="node/224">Maintenance &amp; Support</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../services/devops.html" data-drupal-link-system-path="node/234">DevOps</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../solutions.html" data-drupal-link-system-path="node/202">Solutions</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <div class="navigation-item_head">
+          <a href="../solutions/digital-enterprise.html" data-drupal-link-system-path="node/231">Digital Enterprise</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../solutions/data-management.html" data-drupal-link-system-path="node/254">Data Management</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/business-process-management.html" data-drupal-link-system-path="node/253">Business Process Management</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/big-data-consulting.html" data-drupal-link-system-path="node/252">Big Data &amp; Analytics</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/collaboration.html" data-drupal-link-system-path="node/232">Collaboration</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/infrastructure-management.html" data-drupal-link-system-path="node/237">Infrastructure Management</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/business-intelligence.html" data-drupal-link-system-path="node/250">Business Intelligence</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="list-item">
+      
+              <div class="navigation-item_head">
+          <a href="../solutions/digital-engagement.html" data-drupal-link-system-path="node/241">Digital Engagement</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../solutions/customer-experience-engagement.html" data-drupal-link-system-path="node/258">Customer Experience &amp; Engagement</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/productivity.html" data-drupal-link-system-path="node/259">Productivity</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/social-technology.html" data-drupal-link-system-path="node/260">Social Technology</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/digital-content.html" data-drupal-link-system-path="node/261">Digital Content</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../solutions/ecommerce-development.html" data-drupal-link-system-path="node/242">Omnichannel Commerce</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../industries.html" data-drupal-link-system-path="node/235">Industries</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../industries/retail-wholesale.html" data-drupal-link-system-path="node/269">Retail &amp; Wholesale</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/automotive.html" data-drupal-link-system-path="node/299">Automotive</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/isv.html" data-drupal-link-system-path="node/267">Software Vendors</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/healthcare.html" data-drupal-link-system-path="node/266">Healthcare</a>
+              </li>
+                              <li class="list-item">
+      
+              <div class="navigation-item_head">
+          <a href="../industries.html" data-drupal-link-system-path="node/235">Other</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../industries/media-entertainment.html" data-drupal-link-system-path="node/239">Media &amp; Entertainment</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/finance.html" data-drupal-link-system-path="node/265">Finance</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/telecommunications.html" data-drupal-link-system-path="node/268">Telecommunications</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../industries/education.html" data-drupal-link-system-path="node/236">Education</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../technologies.html" data-drupal-link-system-path="node/206">Technologies</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <div class="navigation-item_head">
+          <a href="../technologies/core-technologies.html" data-drupal-link-system-path="node/205">Core Technologies</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../technologies/net-development.html" data-drupal-link-system-path="node/240">.NET</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/c-plus-plus-development.html" data-drupal-link-system-path="node/233">С/С++</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/php-development.html" data-drupal-link-system-path="node/264">PHP</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/ruby-on-rails-development.html" data-drupal-link-system-path="node/244">Ruby on Rails</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/python-development.html" data-drupal-link-system-path="node/263">Python</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/java-development.html" data-drupal-link-system-path="node/238">Java</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/frontend.html" data-drupal-link-system-path="node/270">Frontend</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="list-item">
+      
+              <div class="navigation-item_head">
+          <a href="../platforms.html" data-drupal-link-system-path="node/301">Platforms</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../platforms/sap-hybris.html" data-drupal-link-system-path="node/294">SAP Hybris</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../platforms/atlassian-consulting.html" data-drupal-link-system-path="node/284">Atlassian</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../platforms/office365.html" data-drupal-link-system-path="node/262">Office 365</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../platforms/sharepoint-consulting.html" data-drupal-link-system-path="node/248">SharePoint</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/research-development.html" data-drupal-link-system-path="node/243">R&amp;D</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/cloud.html" data-drupal-link-system-path="node/89">Cloud</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/mobile-app-development.html" data-drupal-link-system-path="node/203">Mobility</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/internet-of-things.html" data-drupal-link-system-path="node/134">Internet of Things</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/augmented-virtual-reality.html" data-drupal-link-system-path="node/204">Augmented &amp; Virtual Reality</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../technologies/blockchain-development.html" data-drupal-link-system-path="node/289">Blockchain</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../company/about.html" data-drupal-link-system-path="node/227">Company</a>
+          <i class="navigation-item_trigger">
+            <i>
+              <svg class="icon icon-down">
+                <use xlink:href="#icon-down" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg>
+            </i>
+          </i>
+        </div>
+        <div class="navigation-item_body">
+                        <ul class="list-links">
+    
+                              <li class="list-item">
+      
+              <a href="../company/about.html" data-drupal-link-system-path="node/227">About</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../company/approach.html" data-drupal-link-system-path="node/228">Approach</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../company/awards-recognition.html" data-drupal-link-system-path="node/229">Awards &amp; Recognition</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../company/career.html" data-drupal-link-system-path="node/230">Career</a>
+              </li>
+                              <li class="list-item">
+      
+              <a href="../blog.html" data-drupal-link-system-path="node/80">Blog</a>
+              </li>
+      </ul>
+  
+        </div>
+              </li>
+                              <li class="navigation-item">
+      
+              <div class="navigation-item_head">
+          <a href="../portfolio.html" data-drupal-link-system-path="node/3">Portfolio</a>
+        </div>
+              </li>
+      </ul>
+  
+
+    <a href="../contacts.html"><button class="navigation-link" type="button"><span>Contact us</span></button></a>
+  </div>
+</div>
+<div class="navigation-bg"></div>
+
+
+  </div>
+
+            </div>
+          </div>
+          <div class="message"><a class="message-cover" href="../contacts.html">
+              <svg class="icon icon-message">
+                <use xlink:href="#icon-message" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+              </svg></a></div>
+        </div>
+        <div class="header-bg"></div>
+      </div>
+    </div>
+    
+          <div class="wrap wrap-inner node-case-study">
+  <div class="intro">
+    <div class="intro-bg">
+      <div class="intro-bg_in" style="background-image:url(../sites/default/files/styles/resave/public/casestudy/header_image/Release%20Management%20Plug-in%20for%20an%20MMO%20Web%20Originalf18e.jpg?itok=vsDEu5Ze)"></div>
+    </div>
+    <div class="l">
+      <div class="intro-inner">
+        <div class="intro-head">
+          <div class="bread-crumbs">
+            <ul class="bread-crumbs_list">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <h1>  Release Management Plug-in for Wargaming
+</h1>
+          <p class="descr">  Itransition developed a custom Java-based release management plug-in for one of the leaders in the free-to-play MMO market
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+          <section class="section">
+      <div class="section-inner">
+        <div class="l">
+          <div class="section-name">
+  <div class="title-head">
+    <h2 class="h2"><strong>Problem</strong></h2>
+  </div>
+</div>
+  <div class="text-container">
+  <div class="text-inner">
+                      <h3 class="h3">Customer</h3>
+              <p>Our Customer is an award-winning online game developer and publisher and one of the leaders in the free-to-play MMO market across PC, console, and mobile. Founded as a privately held company in 1998, Wargaming has shipped more than 15 titles and employs over 4,000 professionals across key regions such as North America, Europe, Russia, Asia and Australia.</p>
+<p>Due to the specific business demands of the company, the Customer constantly has to manage new releases of games as well as web services. The Head of DevOps department came to a conclusion that it was necessary to automate the whole cycle of release management. With a view to manage all release tasks, the Customer’s company required developing a custom tool that would be easy and convenient to use for all the employees involved in the process.</p>
+
+  </div>
+</div>
+  <div class="text-container">
+  <div class="text-inner">
+                      <h3 class="h3">Objective</h3>
+              <p>The Customer’s company has offices in many countries scattered around the world. The main difficulty in release management lied in organizing communication between all the involved parties around the world. New releases demand constant collaboration and timely notifications for the right team members both on request and automatically (on event/on schedule); writing long emails with a huge address list was no longer an option.</p>
+<p>New games-related web services releases occur frequently within the Customer’s company, and involve big number of employees across different departments and countries. All in all, there were two main problems that required prompt solution:</p>
+<ul>
+<li>Need for release management automation web services with a custom form to create /edit release-related tasks.</li>
+<li>Necessity to arrange the communication and notification process between geographically scattered teams.</li>
+</ul>
+
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+                  </div>
+      </div>
+    </section>
+          <section class="section full-color">
+      <div class="section-inner">
+        <div class="l">
+          <div class="section-name">
+  <div class="title-head">
+    <h2 class="h2"><strong>Solution</strong></h2>
+  </div>
+</div>
+  <div class="text-container">
+  <div class="text-inner">
+            <p>Itransition Customer Support engineers have developed and implemented a Java-based plug-in to automate the full cycle of release creation, management, and control, as well as a custom tool integrated with 3rd party data storage for collecting addresses and sending out standard and custom notifications according to the predefined rules.</p>
+<p>The delivered solution automates the following business processes:</p>
+<ul>
+<li>Managing release tasks and subtasks;</li>
+<li>Sending notifications to the relevant parties about planned or current releases;</li>
+<li>Planning the releases;</li>
+<li>Monitoring the tasks resolution.</li>
+</ul>
+<p>The solution provides for the following user roles:</p>
+
+  </div>
+</div>
+  <div class="text-container">  <div class="figure-container">
+    <figure class="figure scheme">
+      <img src="../sites/default/files/styles/resave/public/images/image/2017-05/Release%20Management%20Plug-in%20for%20an%20MMO%20Scheme%201_26367.png?itok=-VTtjg7p" alt="The solution user roles">
+          </figure>
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+                  </div>
+      </div>
+    </section>
+          <section class="section">
+      <div class="section-inner">
+        <div class="l">
+          <div class="section-name">
+  <div class="title-head">
+    <h2 class="h2"><strong>Process</strong></h2>
+  </div>
+</div>
+  <div class="text-container">
+  <div class="text-inner">
+            <p>Itransition team was involved in the following stages of the solution development:</p>
+
+  </div>
+</div>
+    <div class="figure-container">
+    <figure class="figure scheme">
+      <img src="../sites/default/files/styles/resave/public/images/image/2017-05/Release%20Management%20Plug-in%20for%20an%20MMO%20Scheme%202_207e9.png?itok=5Rjtf6TA" alt="Full-cycle development">
+          </figure>
+  </div>
+
+  <div class="text-container">
+  <div class="text-inner">
+            <p>As a result of the requirements analysis and specification, our team has provided the Customer with a custom tool that automates the full cycle of gaming and web services release management. Itransition team has also created a complex business logic that allows creating customized emails in tune with the information that release tasks contain,&nbsp;set up the process of receivers list formation and the rules for sending letters by specific rules.</p>
+
+  </div>
+</div>
+  <div class="text-container">
+  <div class="important-info">
+            <p>Currently the solution is implemented and successfully used within the Customer’s company. The Customer abandoned all other release management practices as the developed solution has proven to be far more effective.</p>
+
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+                                    <div class="text-container">
+  <div class="wrap-tags_share">
+    <div class="wrap-tags_share-inner">
+      <div class="tags">
+        <div class="tags-name">Tags:</div>
+        <div class="tags-list">
+                      <a class="tags-item" href="../portfolio3edb.html?tag=97"><span>Application Development</span></a>
+                      <a class="tags-item" href="../portfolio1124.html?tag=103"><span>Systems Integration</span></a>
+                      <a class="tags-item" href="../portfolio7c25.html?tag=105"><span>Atlassian</span></a>
+                      <a class="tags-item" href="../portfolioe098.html?tag=21"><span>Java</span></a>
+                      <a class="tags-item" href="../portfoliob3a6.html?tag=26"><span>ISV</span></a>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                              </div>
+      </div>
+    </section>
+          <div id="block-itransitionrelatedcases" class="block block-itransition-core block-itransition-core-itransition-related-cases">
+  
+    
+      <script>(function(){jsonRelatedCases={"cards":[{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/SaaS%20Portal%20for%20Housing%20Community%20Pic%20Web%20Original.jpg?itok=is76KXUt","img_brand":null,"js_tags":true,"tagsCard":[{"name":"Application Development","tid":"97"},{"name":"QA & Testing","tid":"102"},{"name":"Systems Integration","tid":"103"},{"name":"Business Process Management","tid":"40"},{"name":"Cloud","tid":"6"},{"name":"Ruby on Rails","tid":"18"},{"name":"Public Sector","tid":"53"}],"title":"SaaS Portal for Housing Community","descr":"Housing Systems Solutions, Inc. teams up with Itransition for full-cycle development of a powerful set of ASP.NET cloud-based applications united in a single and comprehensive solution.","link":"\/portfolio\/saas-portal-public-and-affordable-housing-community","width":50},{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/Mobile%20Order%20Processing%20Solution%20Web%20Original.jpg?itok=BRCHU7Jl","img_brand":null,"js_tags":true,"tagsCard":[{"name":"Application Development","tid":"97"},{"name":"QA & Testing","tid":"102"},{"name":"Systems Integration","tid":"103"},{"name":"Customer Experience & Engagement","tid":"33"},{"name":"Collaboration","tid":"42"},{"name":"Portals","tid":"57"},{"name":"Manufacturing","tid":"52"},{"name":"Internet of Things","tid":"14"},{"name":"Mobility","tid":"15"}],"title":"Mobile Order Processing Solution","descr":"A versatile mobile tool for order processing automation and embraces a set of instruments for order entry, management and monitoring.","link":"\/portfolio\/mobile-order-processing","width":50},{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/Affiliate%20Partner%20Network%20Pic%20Web%20Original.jpg?itok=l9FP78cT","img_brand":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/customer_logo\/expedia-logo.png?itok=5mGccfy0","js_tags":true,"tagsCard":[{"name":"Application Development","tid":"97"},{"name":"Portals","tid":"57"},{"name":"Java","tid":"21"},{"name":"Travel & Hospitality","tid":"56"}],"title":"Expedia Partner Network","descr":"Expedia teamed up with Itransition to revamp the Expedia Affiliate Network solution to redeem the leading position and boost revenues generated by it.","link":"\/portfolio\/affiliate-network-portal","width":33},{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/SaaS%20Solution%20for%20Payable%20Automation%20Pic%20Web%20Original.jpg?itok=ZUksfp3O","img_brand":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/customer_logo\/anybill.png?itok=L0N2ZWJH","js_tags":true,"tagsCard":[{"name":"QA & Testing","tid":"102"},{"name":"Systems Integration","tid":"103"},{"name":"Collaboration","tid":"42"},{"name":"Cloud","tid":"6"},{"name":".NET","tid":"22"},{"name":"Finance","tid":"24"},{"name":"ISV","tid":"26"}],"title":"SaaS Solution for Payable Automation","descr":"Anybill aimed to launch an online billing management service to assist companies in optimizing their accounting processes.","link":"\/portfolio\/saas-accounts-payable","width":33},{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/Unlimited%20Range%20Baby%20Monitor%20Web%20Original.jpg?itok=PxN3MaqB","img_brand":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/customer_logo\/evoz.png?itok=NaqQNJtG","js_tags":true,"tagsCard":[{"name":"Application Development","tid":"97"},{"name":"QA & Testing","tid":"102"},{"name":"Systems Integration","tid":"103"},{"name":"Digital Content","tid":"36"},{"name":"Ruby on Rails","tid":"18"},{"name":"C\/C++","tid":"9"},{"name":"Retail & Wholesale","tid":"23"},{"name":"ISV","tid":"26"},{"name":"Manufacturing","tid":"52"}],"title":"Unlimited Range Baby Monitor","descr":"With Evoz Baby Monitor parents can listen to their baby anytime, anywhere, right from their iPhone or any web browser. The solution connects parents to personalized services and lets them learn more about the health and activity of their children.","link":"\/portfolio\/mobile-baby-monitor","width":33},{"full":true,"img":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/header_image\/Management%20System%20Redevelopment%20%20Pic%20Web%20Original.jpg?itok=YXQeQFry","img_brand":"https:\/\/www.itransition.com\/sites\/default\/files\/styles\/resave\/public\/casestudy\/customer_logo\/carlabella.png?itok=yPCy3TU3","js_tags":true,"tagsCard":[{"name":"Business Process Management","tid":"40"},{"name":"Java","tid":"21"},{"name":"ISV","tid":"26"}],"title":"Expense Management System Redevelopment\t","descr":"Expense management system redevelopment for CarlaBella entailed a sustainable 12-year cooperation regarding J2EE-based system technical support and functionality enhancement.","link":"\/portfolio\/expense-management-system-redevelopment-and-support","width":100}],"argsNid":"21,85,42,52,55,63,58"};})('related_cases');</script>
+<section class="section full-color related-cases" style="display: none;">
+    <div class="section-inner">
+        <div class="l">
+            <div class="more-container">
+                <h4 class="h4">Related  <strong>cases</strong></h4>
+            </div>
+            <div class="slider-container slider-cases" data-nid="">
+                <div class="variable-slider">
+                    <div class="portfolio_list">
+                        <div class="card-container case-slider"></div>
+                    </div>
+                </div>
+                <div class="mobile-variable_slider">
+                    <div class="portfolio_list">
+                        <div class="card-container case-slider_mobile"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  </div>
+
+  </div>
+
+      </div>
+  <div class="footer">
+          <div class="footer-topper" id="contacts">
+          <div class="region region-footer-topper">
+    <div id="block-contactusitransition" class="block block-itransition-core block-itransition-contact-us">
+  
+    
+      <div class="l">
+  <div class="section">
+    <h4 class="h4 section-title">Contact Us</h4>
+    <div class="feedback-form center">
+      <div class="feedback-form_inner">
+        <div id="webform_submission_contact_us_node_21_form-ajax"><form class="webform-submission-contact-us-node-21-form webform-submission-form js-webform-submit-once js-webform-details-toggle webform-details-toggle form js-validation" data-drupal-selector="webform-submission-contact-us-node-21-form" data-maxfilesize="10" data-maxfile="5" novalidate="" enctype="multipart/form-data" action="https://www.itransition.com/portfolio/release-management-automation" method="post" id="webform-submission-contact-us-node-21-form" accept-charset="UTF-8">
+  <input autocomplete="off" data-drupal-selector="form-eikbw5c0wzuofflbjbfh6vj9ngo7i7nif8icwxq7jbo" type="hidden" name="form_build_id" value="form-eikbW5c0WzUofFLBJbfh6vJ9NgO7i7NiF8ICwXQ7Jbo"/>
+
+  
+  <input data-drupal-selector="edit-webform-submission-contact-us-node-21-form" type="hidden" name="form_id" value="webform_submission_contact_us_node_21_form"/>
+
+  <div class="hidden js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-window-uid form-item-window-uid form-no-label">
+      <label for="edit-window-uid" class="visually-hidden">window.uid</label>
+        <input data-drupal-selector="edit-window-uid" type="text" id="edit-window-uid" name="window_uid" value="1523281885776" size="60" maxlength="255" class="form-text"/>
+
+        </div>
+
+  <input class="hidden" type="text">
+    
+  
+  <div class="required-item-v"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-checker form-item-checker">
+      <label for="edit-checker">Your address</label>
+        <input data-drupal-selector="edit-checker" type="text" id="edit-checker" name="checker" value="" size="60" maxlength="128" class="form-text"/>
+
+        </div>
+</div>
+  
+  <div class="required-item-v"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-homepage form-item-homepage">
+      <label for="edit-homepage">Homepage</label>
+        <input data-drupal-selector="edit-homepage" type="text" id="edit-homepage" name="homepage" value="" size="60" maxlength="128" class="form-text"/>
+
+        </div>
+</div>
+  
+
+  <div class="form-row">
+    <div class="form-field">
+      <div class="form-field_group">
+        <input class="input js-empty form-text required" data-validation="required" data-validation-error-msg="Specify your full name — we’ll discuss your project in person" data-drupal-selector="edit-fulle-name" type="text" id="edit-fulle-name" name="fulle_name" value="" size="60" maxlength="255" required="required" aria-required="true"/>
+
+        <label class="form-label"><span>Full name</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </svg></i>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-field_group">
+        <input class="input js-empty form-email required" data-webform-required-error="Specify your e-mail — we’ll send you an NDA and other relevant documents" data-validation="email" data-validation-error-msg="Specify your e-mail — we’ll send you an NDA and other relevant documents" data-drupal-selector="edit-email-base-64" type="email" id="edit-email-base-64" name="email_base_64" value="" size="60" maxlength="254" required="required" aria-required="true"/>
+
+        <label class="form-label"><span>E-mail</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </svg></i>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <div class="form-field_group">
+        <input class="input js-empty form-tel required" data-validation="length custom" data-validation-length="4-19" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Specify your phone number — we’ll call you to answer your questions" data-drupal-selector="edit-phone-number" type="tel" id="edit-phone-number" name="phone_number" value="" size="30" maxlength="128" required="required" aria-required="true"/>
+
+        <label class="form-label"><span>Phone number</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </svg></i>
+      </div>
+    </div>
+    <div class="form-field">
+      <div class="form-field_group">
+        <div class="selectBox">
+          <select class="selectbox form-select" data-validation-length="min1" data-validation-error-msg="Please fill the field" data-drupal-selector="edit-country" id="edit-country" name="country"><option value="" selected="selected">- None -</option><option value="Afghanistan">Afghanistan</option><option value="Aland Islands">Aland Islands</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Benin">Benin</option><option value="Belize">Belize</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option><option value="British Indian Ocean Territory">British Indian Ocean Territory</option><option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo (Brazzaville)">Congo (Brazzaville)</option><option value="Congo (Kinshasa)">Congo (Kinshasa)</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="French Southern Territories">French Southern Territories</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey">Guernsey</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option><option value="Honduras">Honduras</option><option value="Hong Kong S.A.R., China">Hong Kong S.A.R., China</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Ivory Coast">Ivory Coast</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jersey">Jersey</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macao S.A.R., China">Macao S.A.R., China</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="North Korea">North Korea</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestinian Territory">Palestinian Territory</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Barthélemy">Saint Barthélemy</option><option value="Saint Helena">Saint Helena</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Martin (French part)">Saint Martin (French part)</option><option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="South Korea">South Korea</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="U.S. Virgin Islands">U.S. Virgin Islands</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican">Vatican</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Wallis and Futuna">Wallis and Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select>
+          <div class="select-container">
+            <div class="select-text_container">
+              <div class="select-text" contenteditable="true"></div>
+              <div class="select-arrow">
+                <svg class="icon icon-drop">
+                  <use xlink:href="#icon-drop" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+                </svg>
+              </div>
+            </div>
+            <div class="select-dropdown"></div>
+          </div>
+        </div>
+        <label class="form-label"><span>Country</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning"/>
+          </svg></i>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <div class="form-field_group">
+        <input class="input js-empty form-text" autocomplete="off" data-validation-error-msg="Specify your company — we’ll discuss your project in person" maxlength="255" data-drupal-selector="edit-company" type="text" id="edit-company" name="company" value="" size="60"/>
+
+        <label class="form-label"><span>Company</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </svg></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field form-field_textarea">
+      <div class="form-field_group">
+            <textarea class="textarea js-empty form-textarea required resize-vertical" data-validation="length" data-validation-length="min4" data-validation-error-msg="Describe your idea — we’ll provide a detailed estimate sooner" maxlength="5000" data-drupal-selector="edit-describe-your-idea" id="edit-describe-your-idea" name="describe_your_idea" rows="5" cols="60" required="required" aria-required="true"></textarea>
+
+        <label class="form-label"><span>Describe your idea</span></label><i class="warning">
+          <svg class="icon icon-warning">
+            <use xlink:href="#icon-warning" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </svg></i>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <div class="form-field_group form-field_file-collection">
+        <div class="form-field_file-item">
+          <div class="upload-files preview-container">
+            <div id="ajax-wrapper">
+<div class="js-form-item form-item js-form-type-managed-file form-type-managed-file js-form-item-attach-file form-item-attach-file">
+  <label for="edit-attach-file-upload">Attach file</label>
+  <div class="upload-files preview-container dz-clickable js-form-managed-file form-managed-file" id="edit-attach-file-upload">
+    <div id="ajax-wrapper">
+      <div id="edit-attach-file-upload" class="upload-files preview-container dz-clickable js-form-managed-file form-managed-file">
+        <input multiple="multiple" type="file" id="edit-attach-file-upload" name="files[attach_file][]" size="22" class="js-form-file form-file"/>
+  <input class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-attach-file-upload-button" formnovalidate="formnovalidate" type="submit" id="edit-attach-file-upload-button" name="attach_file_upload_button" value="Upload"/>
+<div class="description">The total size of attachments should not exceed 10 MB.<br/>Allowed types: jpg, jpeg, png, gif, pdf, doc, docx, ppt, pptx, txt, rtf, odt, ods, odg, odp, xls, xlsx, xlxs, vcf, vcard, key, rar, zip, 7z, gz, gzip, tar.
+</div><input data-drupal-selector="edit-attach-file-fids" type="hidden" name="attach_file[fids]"/>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden action">
+        <button class="submit-feedback button button--primary js-form-submit form-submit" data-form="contacts" data-drupal-selector="edit-actions-submit" data-disable-refocus="true" type="submit" id="edit-actions-submit" name="op" value="Send your message" tabindex="0"><span>Send your message</span></button>
+
+    </div>
+    <div class="form-field">
+      <div class="form-field_group">
+        <button class="submit-feedback button button--primary no-ajax" data-form="contacts" name="op" value="Send your message" tabindex="0" type="submit">
+          <span>Send your message</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+</form>
+</div>
+      </div>
+    </div>
+          <div class="feedback-text">
+                  <div class="textblock">
+            <div class="textblock-title">
+              <p>United States</p>
+            </div>
+            <div class="textblock-content">
+                              <p class="phone"><a href="tel:7202072820">720 207 2820</a> <span>Sales inquiries</span></p>
+                          </div>
+          </div>
+                  <div class="textblock">
+            <div class="textblock-title">
+              <p>United Kingdom</p>
+            </div>
+            <div class="textblock-content">
+                              <p class="phone"><a href="tel:442077121502">44 20 7712 1502</a> <span>Sales inquiries</span></p>
+                              <p class="phone"><a href="tel:442077121505">44 20 7712 1505</a> <span>General inquiries</span></p>
+                          </div>
+          </div>
+              </div>
+      </div>
+</div>
+
+  </div>
+
+  </div>
+
+      </div>
+              <div class="footer-bottom">
+          <div class="region region-footer-bottom">
+    <div id="block-copyrightitransition" class="block block-itransition-core block-itransition-copyright">
+  
+    
+      <div class="l">
+  <div class="copyright">© 2018 Itransition</div><a class="private" href="../privacy-policy.html">Privacy Policy</a>
+  <div class="center">
+    <div class="social"><a class="social-item" href="https://www.facebook.com/Itransition" target="_blank" rel="nofollow">
+        <svg class="icon icon-facebook">
+          <use xlink:href="#icon-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </svg></a><a class="social-item" href="https://www.linkedin.com/company/10921/" target="_blank" rel="nofollow">
+        <svg class="icon icon-linked">
+          <use xlink:href="#icon-linked" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </svg></a><a class="social-item" href="https://twitter.com/itransition" target="_blank" rel="nofollow">
+        <svg class="icon icon-twit">
+          <use xlink:href="#icon-twit" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </svg></a>
+        <a class="social-item" href="../blog/feed" target="_blank">
+          <svg class="icon icon-rss">
+            <use xlink:href="#icon-rss" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+      </div>
+      </div>
+</div>
+  
+
+  <link rel="preload" href="../sites/default/files/css/css_fpcMsvqP060FWtAOhuk1uvksXw86Yhi9HU8JJzcv2KA7dc9.css?p6nxfv" media="all" as="style" data-onload-rel="stylesheet" onload="this.rel=this.dataset.onloadRel"/>
+<link rel="preload" href="../sites/default/files/css/css_obn2NJ8tw2n-pgFrTEHi5voyFMkmC1MoidOcLZn938I7dc9.css?p6nxfv" media="all" as="style" data-onload-rel="stylesheet" onload="this.rel=this.dataset.onloadRel"/>
+<noscript><link rel="stylesheet" href="../sites/default/files/css/css_fpcMsvqP060FWtAOhuk1uvksXw86Yhi9HU8JJzcv2KA7dc9.css?p6nxfv" media="all"/>
+</noscript><noscript><link rel="stylesheet" href="../sites/default/files/css/css_obn2NJ8tw2n-pgFrTEHi5voyFMkmC1MoidOcLZn938I7dc9.css?p6nxfv" media="all"/>
+</noscript><script>!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);</script>
+  <script src="../../yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async></script>
+    <link rel="preload" media="all" href="https://hello.myfonts.net/count/32d3c2" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" media="all" href="https://hello.myfonts.net/count/32d3c2"></noscript>
+      
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/21","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/base,classy\/file,classy\/messages,core\/html5shiv,core\/normalize,fasp\/stylesheet,file\/drupal.file,itransition\/global-styling,itransition_core\/itransition_core_validate,system\/base,webform\/webform.ajax,webform\/webform.element.details.save,webform\/webform.element.details.toggle,webform\/webform.form","theme":"itransition","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/portfolio\/release-management-automation?ajax_form=1":true,"\/portfolio\/release-management-automation?element_parents=elements\/attach_file\u0026ajax_form=1":true},"smartIp":"{\u0022location\u0022:{\u0022source\u0022:\u0022smart_ip\u0022,\u0022ipAddress\u0022:\u0022192.140.149.25\u0022,\u0022ipVersion\u0022:4,\u0022timestamp\u0022:1523281885,\u0022originalData\u0022:{\u0022city\u0022:{\u0022geoname_id\u0022:1172451,\u0022names\u0022:{\u0022de\u0022:\u0022Lahore\u0022,\u0022en\u0022:\u0022Lahore\u0022,\u0022es\u0022:\u0022Lahore\u0022,\u0022fr\u0022:\u0022Lahore\u0022,\u0022ja\u0022:\u0022\\u30e9\\u30db\\u30fc\\u30eb\u0022,\u0022pt-BR\u0022:\u0022Lahore\u0022,\u0022ru\u0022:\u0022\\u041b\\u0430\\u0445\\u043e\\u0440\u0022,\u0022zh-CN\u0022:\u0022\\u62c9\\u5408\\u5c14\u0022}},\u0022continent\u0022:{\u0022code\u0022:\u0022AS\u0022,\u0022geoname_id\u0022:6255147,\u0022names\u0022:{\u0022de\u0022:\u0022Asien\u0022,\u0022en\u0022:\u0022Asia\u0022,\u0022es\u0022:\u0022Asia\u0022,\u0022fr\u0022:\u0022Asie\u0022,\u0022ja\u0022:\u0022\\u30a2\\u30b8\\u30a2\u0022,\u0022pt-BR\u0022:\u0022\\u00c1sia\u0022,\u0022ru\u0022:\u0022\\u0410\\u0437\\u0438\\u044f\u0022,\u0022zh-CN\u0022:\u0022\\u4e9a\\u6d32\u0022}},\u0022country\u0022:{\u0022geoname_id\u0022:1168579,\u0022iso_code\u0022:\u0022PK\u0022,\u0022names\u0022:{\u0022de\u0022:\u0022Pakistan\u0022,\u0022en\u0022:\u0022Pakistan\u0022,\u0022es\u0022:\u0022Pakist\\u00e1n\u0022,\u0022fr\u0022:\u0022Pakistan\u0022,\u0022ja\u0022:\u0022\\u30d1\\u30ad\\u30b9\\u30bf\\u30f3\\u30fb\\u30a4\\u30b9\\u30e9\\u30e0\\u5171\\u548c\\u56fd\u0022,\u0022pt-BR\u0022:\u0022Paquist\\u00e3o\u0022,\u0022ru\u0022:\u0022\\u041f\\u0430\\u043a\\u0438\\u0441\\u0442\\u0430\\u043d\u0022,\u0022zh-CN\u0022:\u0022\\u5df4\\u57fa\\u65af\\u5766\u0022}},\u0022location\u0022:{\u0022accuracy_radius\u0022:5,\u0022latitude\u0022:31.4888,\u0022longitude\u0022:74.3686,\u0022time_zone\u0022:\u0022Asia\\\/Karachi\u0022},\u0022postal\u0022:{\u0022code\u0022:\u002254000\u0022},\u0022registered_country\u0022:{\u0022geoname_id\u0022:1168579,\u0022iso_code\u0022:\u0022PK\u0022,\u0022names\u0022:{\u0022de\u0022:\u0022Pakistan\u0022,\u0022en\u0022:\u0022Pakistan\u0022,\u0022es\u0022:\u0022Pakist\\u00e1n\u0022,\u0022fr\u0022:\u0022Pakistan\u0022,\u0022ja\u0022:\u0022\\u30d1\\u30ad\\u30b9\\u30bf\\u30f3\\u30fb\\u30a4\\u30b9\\u30e9\\u30e0\\u5171\\u548c\\u56fd\u0022,\u0022pt-BR\u0022:\u0022Paquist\\u00e3o\u0022,\u0022ru\u0022:\u0022\\u041f\\u0430\\u043a\\u0438\\u0441\\u0442\\u0430\\u043d\u0022,\u0022zh-CN\u0022:\u0022\\u5df4\\u57fa\\u65af\\u5766\u0022}},\u0022subdivisions\u0022:[{\u0022geoname_id\u0022:1167710,\u0022iso_code\u0022:\u0022PB\u0022,\u0022names\u0022:{\u0022en\u0022:\u0022Punjab\u0022}}]},\u0022country\u0022:\u0022Pakistan\u0022,\u0022countryCode\u0022:\u0022PK\u0022,\u0022region\u0022:\u0022Punjab\u0022,\u0022regionCode\u0022:\u0022PB\u0022,\u0022city\u0022:\u0022Lahore\u0022,\u0022zip\u0022:\u002254000\u0022,\u0022latitude\u0022:31.4888,\u0022longitude\u0022:74.3686,\u0022timeZone\u0022:\u0022Asia\\\/Karachi\u0022}}","smartIpSrc":{"smartIp":"smart_ip","geocodedSmartIp":"geocoded_smart_ip","w3c":"w3c"},"ajax":{"edit-actions-submit":{"callback":"::submitAjaxForm","event":"click","disable-refocus":true,"effect":"fade","speed":1000,"progress":{"type":"throbber","message":""},"url":"\/portfolio\/release-management-automation?ajax_form=1","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Send your message"}},"edit-attach-file-upload-button":{"callback":["Drupal\\file\\Element\\ManagedFile","uploadAjaxCallback"],"wrapper":"ajax-wrapper","effect":"fade","progress":{"type":"throbber","message":null},"event":"mousedown","keypress":true,"prevent":"click","url":"\/portfolio\/release-management-automation?element_parents=elements\/attach_file\u0026ajax_form=1","dialogType":"ajax","submit":{"_triggering_element_name":"attach_file_upload_button","_triggering_element_value":"Upload"}}},"file":{"elements":{"#edit-attach-file":"jpg,jpeg,png,gif,pdf,doc,docx,ppt,pptx,txt,rtf,odt,ods,odg,odp,xls,xlsx,xlxs,vcf,vcard,key,rar,zip,7z,gz,gzip,tar"}},"user":{"uid":0,"permissionsHash":"354c367958db08d1b4d64942da9fbf988ed3dbf9d4d8bb68b331cd646d071dde"}}</script>
+<script src="../sites/default/files/js/js_tRr5Cwmy3wS_-ai5ra2aIu6gNW8HaQ6VygKr7WMyd-w.js"></script>
+
+</body>
+
+<!-- Mirrored from www.itransition.com/portfolio/release-management-automation by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Apr 2018 13:54:16 GMT -->
+</html>
